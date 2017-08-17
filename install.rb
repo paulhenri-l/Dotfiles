@@ -36,3 +36,7 @@ system "vim +PluginInstall +qall"
 
 # Compile vimproc
 # cd ~/.vim/bundle/vimproc && make && cd -
+
+# The Silver Searcher
+global_ag_ignore = File.absolute_path 'global_ag_ignore'
+File.symlink global_ag_ignore, "#{owner_directory}/.agignore"

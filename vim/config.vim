@@ -93,6 +93,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Buffer navigation with gb(n|p)
+nmap gbn :bn<CR>
+nmap gbp :bp<CR>
+
 "Easy escaping to normal mode
 imap jj <esc>
 
@@ -106,6 +110,8 @@ augroup autosourcing
     autocmd BufWritePost plugins.vim source $MYVIMRC
 augroup end
 
+"AutoComplete - Close preview window on complete done
+autocmd CompleteDone * pclose
+
 "-----Plugins-----"
 so ~/.vim/plugins.vim                              " Plugins loader
-

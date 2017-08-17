@@ -1,0 +1,7 @@
+tmp/
+log/
+*.log
+.keep
+.idea
+node_modules
+tags
