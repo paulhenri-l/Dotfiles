@@ -100,6 +100,9 @@ imap jj <esc>
 "Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
+"NerdTree
+nmap <Leader>& :NERDTreeToggle<cr>
+
 "-----Auto commands-----"
 augroup autosourcing
     autocmd!

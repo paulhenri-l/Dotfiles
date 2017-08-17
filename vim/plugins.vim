@@ -39,7 +39,7 @@ filetype plugin indent on
 "-----Plugin configuration-----"
 
 "NerdTree
-nmap <Leader>& :NERDTreeToggle<cr>
+" nmap <Leader>& :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0         "Don't let NerdTree Hijack Vinegar
 
 "CtrlP
