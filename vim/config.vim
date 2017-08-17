@@ -1,5 +1,4 @@
 set nocompatible                                   " This must be first, because it changes other options as side effect
-so ~/.vim/plugins.vim                              " Plugins loader
 
 "-----General Settings-----"
 filetype plugin on                                 " Enable filtype plugins
@@ -100,12 +99,13 @@ imap jj <esc>
 "Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
-"NerdTree
-nmap <Leader>& :NERDTreeToggle<cr>
-
 "-----Auto commands-----"
 augroup autosourcing
     autocmd!
     autocmd BufWritePost .vimrc source $MYVIMRC
     autocmd BufWritePost plugins.vim source $MYVIMRC
 augroup end
+
+"-----Plugins-----"
+so ~/.vim/plugins.vim                              " Plugins loader
+

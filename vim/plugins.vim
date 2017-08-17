@@ -39,7 +39,7 @@ filetype plugin indent on
 "-----Plugin configuration-----"
 
 "NerdTree
-" nmap <Leader>& :NERDTreeToggle<cr>
+nmap <Leader>& :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0         "Don't let NerdTree Hijack Vinegar
 
 "CtrlP
@@ -57,8 +57,8 @@ let g:airline_powerline_fonts = 1
 let g:PHP_removeCRwhenUnix = 1
 
 "Nerdcomment
-nmap <Leader>; <Plug>NERDCommenterToggle<CR>
-vmap <Leader>; <Plug>NERDCommenterToggle<CR>
+nmap <Leader>k <Plug>NERDCommenterToggle<CR>
+vmap <Leader>k <Plug>NERDCommenterToggle<CR>
 let g:NERDSpaceDelims = 1               " Add spaces after comment delimiters by default
 let g:NERDCompactSexyComs = 1           " Use compact syntax for prettified multi-line comments
 let g:NERDDefaultAlign = 'left'         " Align line-wise comment delimiters flush left instead of following code indentation
@@ -96,8 +96,8 @@ if executable('ag')
  "Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
- "Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+ "Use ag in CtrlP for listing files.
+  let g:ctrlp_user_command = 'ag %s --skip-vcs-ignores -l --nocolor -g ""'
 
  "ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
