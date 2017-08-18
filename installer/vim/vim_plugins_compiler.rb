@@ -1,7 +1,7 @@
 module Vim
   class VimPluginCompiler
-    def initialize(owner_dir)
-      @owner_dir = owner_dir
+    def initialize
+      @owner_dir = File.expand_path '~'
     end
 
     def run!

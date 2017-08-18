@@ -1,2 +1,4 @@
 # Install
-```./dotfiles install --compile```
+run bundle install then
+
+```ruby bin/dotfiles install --compile```

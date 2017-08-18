@@ -1,11 +1,11 @@
 module Vim
   class VimDirectoryInstaller
-    def initialize(owner_directory)
-      @ownerDirectory = owner_directory
-      @vimConfig = File.absolute_path 'vim/config.vim'
-      @vimPlugins = File.absolute_path 'vim/plugins.vim'
-      @vimColors = File.absolute_path 'vim/colors'
-      @vimFtplugins = File.absolute_path 'vim/ftplugins'
+    def initialize
+      @ownerDirectory = File.expand_path '~'
+      @vimConfig = File.absolute_path 'files/vim/config.vim'
+      @vimPlugins = File.absolute_path 'files/vim/plugins.vim'
+      @vimColors = File.absolute_path 'files/vim/colors'
+      @vimFtplugins = File.absolute_path 'file/vim/ftplugins'
     end
 
     def run!
@@ -31,7 +31,7 @@ module Vim
     def create_symlink(old, new)
       new = "#{@ownerDirectory}/#{new}"
 
-      unless File.exist? new or Dir.exist? new
+      unless File.exist? new or Dir.exist? new or File.symlink? new
         FileUtils.ln_s old,new
       end
     end

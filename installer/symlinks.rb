@@ -1,6 +1,6 @@
 class Symlinks
-  def initialize(owner_dir)
-    @owner_dir = owner_dir
+  def initialize
+    @owner_dir = File.expand_path '~'
   end
 
   def install!
@@ -12,10 +12,10 @@ class Symlinks
   private
   def symlink(list)
     list.each do |symlink|
-      old = File.absolute_path(symlink[:old])
+      old = File.absolute_path("files/#{symlink[:old]}")
       new = "#{@owner_dir}/#{symlink[:new]}"
 
-      unless File.exist? new or Dir.exist? new
+      unless File.exists? new or Dir.exists? new or File.symlink? new
         FileUtils.ln_s old, new
       end
     end

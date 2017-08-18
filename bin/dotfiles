@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+require_relative '../installer/vim/vim'
+require_relative '../installer/symlinks'
+require_relative '../installer/programs/programs'
+
+class Dotfiles < Thor
+  desc 'Install the dotfiles', ''
+  method_options :compile => :boolean
+  def install
+    Symlinks.new.install!
+    Programs::Programs.new.install!
+    Vim::Vim.new(options[:compile]).install!
+  end
+end
+
+Dotfiles.start(ARGV)

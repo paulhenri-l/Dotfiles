@@ -4,15 +4,14 @@ require_relative './vim_plugins_compiler'
 
 module Vim
   class Vim
-    def initialize(owner_dir, compile)
-      @owner_dir = owner_dir
+    def initialize(compile)
       @compile = compile
     end
 
     def install!
-      VimDirectoryInstaller.new(@owner_dir).run!
-      VimPlugins.new(@owner_dir).run!
-      VimPluginCompiler.new(@owner_dir).run! if @compile
+      VimDirectoryInstaller.new.run!
+      VimPlugins.new.run!
+      VimPluginCompiler.new.run! if @compile
     end
   end
 end

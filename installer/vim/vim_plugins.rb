@@ -1,5 +1,6 @@
 class VimPlugins
-  def initialize(owner_dir)
+  def initialize
+    owner_dir = File.expand_path '~'
     @vundle_dir = "#{owner_dir}/.vim/bundle/Vundle.vim"
   end
 
