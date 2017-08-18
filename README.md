@@ -1,1 +1,2 @@
-Dotfiles
+# Install
+```./dotfiles install --compile```

@@ -1,18 +1,20 @@
 #!/usr/bin/env ruby
 
-require "thor"
-require "./installer/VimDirectory.rb"
+require 'thor'
+require_relative 'installer/vim/vim'
+require_relative 'installer/symlinks'
+require_relative 'installer/programs/programs'
 
-class MyCLI < Thor
-  desc "hello NAME", "say hello to NAME"
+class Dotfiles < Thor
+  desc 'Install the dotfiles', ''
+  method_options :compile => :boolean
   def install(owner_directory = nil)
-      if owner_directory == nil
-        owner_directory = File.expand_path '~'
-      end
+    owner_directory = File.expand_path '~' if owner_directory == nil
 
-      vimDirectory = VimDirectory.new owner_directory
-      vimDirectory.createSymlinks
+    Symlinks.new(owner_directory).install!
+    Programs::Programs.new.install!
+    Vim::Vim.new(owner_directory, options[:compile]).install!
   end
 end
 
-MyCLI.start(ARGV)
+Dotfiles.start(ARGV)
