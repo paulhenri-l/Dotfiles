@@ -3,6 +3,7 @@
 require 'thor'
 require_relative '../installer/vim/vim'
 require_relative '../installer/symlinks'
+require_relative '../installer/homebrew'
 require_relative '../installer/programs/programs'
 
 class Dotfiles < Thor
@@ -10,6 +11,7 @@ class Dotfiles < Thor
   method_options :compile => :boolean
   def install
     Symlinks.new.install!
+    HomeBrew::new.install!
     Programs::Programs.new.install!
     Vim::Vim.new(options[:compile]).install!
   end

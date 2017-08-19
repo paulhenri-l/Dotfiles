@@ -12,6 +12,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'rking/ag.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'vim-php/tagbar-phpctags.vim'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
@@ -81,6 +82,9 @@ let g:syntastic_php_phpcs_args = '--standard=PSR2'
 "TagBar
 nmap <Leader>t :Tagbar<CR>
 
+"PHP Ctags Tagbar
+let g:tagbar_phpctags_bin='phpctags'
+
 "Autosave
 " let g:auto_save = 1  " enable AutoSave on Vim startup
 
@@ -99,5 +103,5 @@ if executable('ag')
   " Use ag in CtrlP for listing files.
   let g:ctrlp_user_command = 'ag %s --skip-vcs-ignores -l --nocolor -g ""'
   " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+  " let g:ctrlp_use_caching = 0
 endif

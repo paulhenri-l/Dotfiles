@@ -7,6 +7,8 @@ module Programs
           {binary: 'ctags', package: 'ctags'},
           {binary: 'ag', package: 'the_silver_searcher'},
           {binary: 'cmake', package: 'cmake'},
+          {binary: 'mvim', package: 'mvim'},
+          {binary: 'phpctags', package: 'phpctags'},
       ]
     end
 
