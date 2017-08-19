@@ -106,6 +106,10 @@ nmap gbp :bp<CR>
 "Easy escaping to normal mode
 imap jj <esc>
 
+"Move lines alt+(j|k)
+nnoremap È :m .-2<CR>==
+nnoremap Ï :m .+1<CR>==
+
 "Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 

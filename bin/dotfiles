@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'thor'
+require_relative '../installer/zsh'
 require_relative '../installer/vim/vim'
 require_relative '../installer/symlinks'
 require_relative '../installer/homebrew'
@@ -12,6 +13,7 @@ class Dotfiles < Thor
   def install
     Symlinks.new.install!
     HomeBrew::new.install!
+    Zsh::new.install!
     Programs::Programs.new.install!
     Vim::Vim.new(options[:compile]).install!
   end
