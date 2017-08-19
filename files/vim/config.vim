@@ -2,8 +2,9 @@ set nocompatible                                   " This must be first, because
 
 "-----GUI Settings-----"
 set guifont=inconsolata\ for\ powerline:h14
-set guioptions-=T " Removes top toolbar
-set guioptions-=r " Removes right hand scroll bar
+set guioptions-=T                                  " Removes top toolbar
+set guioptions-=r                                  " Removes right hand scroll bar
+set go-=L                                          " Removes left hand scroll bar
 
 "-----General Settings-----"
 filetype plugin on                                 " Enable filtype plugins
@@ -22,7 +23,7 @@ set showmatch                                      " Hilight matching )}
 set autowrite                                      " Save on buffer switch
 
 "Tags
-set tags=tags                                      " Manually set the tag file
+set tags=./tags,tags                               " Manually set the tag file
 set path=.                                         " Should speed up tag search
 
 "Responsiveness

@@ -6,7 +6,7 @@ module Vim
 
     def run!
       compile_plugins [
-          # {pluginDir: 'YouCompleteMe', compileCommand: './install.py --all'},
+          {dir: 'YouCompleteMe', compileCommand: './install.py'},
           {dir: 'vimproc.vim', compileCommand: 'make'}
       ]
     end
