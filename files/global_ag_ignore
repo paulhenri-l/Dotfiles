@@ -3,5 +3,5 @@ log/
 *.log
 .keep
 .idea
-node_modules
+node_modules/
 tags

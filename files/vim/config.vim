@@ -73,45 +73,56 @@ let mapleader = ','
 
 "Open the vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<CR>:vsp<CR>:e ~/.vim/plugins.vim<CR>gph
-nmap <Leader>ep :tabedit ~/.vim/plugins.vim<CR>
+nnoremap <Leader>ep :tabedit ~/.vim/plugins.vim<CR>
 
 "No hilight search
-nmap <Leader><Space> :nohlsearch<CR>
+nnoremap <Leader><Space> :nohlsearch<CR>
 
 "Disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
 
 "Tab
-nmap <Leader>nt :tabnew<CR>
+nnoremap <Leader>nt :tabnew<CR>
 
 "Pane navigation with ctrl+hjkl
-nmap <Leader>np :vsp<CR>
-nmap <Leader>nP :sp<CR>
-nmap gpj <C-W><C-J>
-nmap gpk <C-W><C-K>
-nmap gph <C-W><C-H>
-nmap gpl <C-W><C-L>
+nnoremap <Leader>np :vsp<CR>
+nnoremap <Leader>nP :sp<CR>
+nnoremap gpj <C-W><C-J>
+nnoremap gpk <C-W><C-K>
+nnoremap gph <C-W><C-H>
+nnoremap gpl <C-W><C-L>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Buffer navigation with gb(n|p)
-nmap gbn :bn<CR>
-nmap gbp :bp<CR>
+nnoremap gbn :bn<CR>
+nnoremap gbp :bp<CR>
 
 "Easy escaping to normal mode
-imap jj <esc>
+inoremap jj <esc>
 
 "Move lines alt+(j|k)
 nnoremap È :m .-2<CR>==
 nnoremap Ï :m .+1<CR>==
 
+"Resize panes with shift + up - down -right - left
+noremap <silent> <S-Left> <C-w><
+noremap <silent> <S-Up> <C-W>-
+noremap <silent> <S-Down> <C-W>+
+noremap <silent> <S-Right> <C-w>>
+
 "Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+"Tags
+nnoremap <Leader>f <C-]>
+nnoremap <Leader>F :tag 
+nnoremap <Leader>pf <C-T>
 
 "-----Auto commands-----"
 augroup autosourcing

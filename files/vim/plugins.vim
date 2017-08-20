@@ -27,6 +27,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-php-namespace'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'alvan/vim-php-manual'
 "Plugin 'skwp/greplace.vim'
 "Plugin 'ntpeters/vim-better-whitespace'
 "Plugin 'msanders/snipmate.vim'
@@ -40,16 +41,17 @@ call vundle#end()
 filetype plugin indent on
 
 "-----Plugin configuration-----"
-
 "NerdTree
-nmap <Leader>& :NERDTreeToggle<cr>
+nnoremap <Leader>& :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0         "Don't let NerdTree Hijack Vinegar
 
 "CtrlP
-nmap œ :CtrlP<cr>
+nnoremap œ :CtrlP<cr>
+nnoremap <Leader><S-t> :CtrlPTag<CR>
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30' "Results position
-" let g:ctrlp_extensions = ['tag']
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|.idea'
+let g:ctrlp_extensions = ['tag']
+let g:ctrlp_by_filename = 1
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|.idea'
 
 "Vim-airline
 let g:airline#extensions#tabline#enabled = 1
@@ -60,8 +62,8 @@ let g:airline_powerline_fonts = 1
 let g:PHP_removeCRwhenUnix = 1
 
 "Nerdcomment
-nmap <Leader>k <Plug>NERDCommenterToggle<CR>
-vmap <Leader>k <Plug>NERDCommenterToggle<CR>
+nnoremap <Leader>k <Plug>NERDCommenterToggle<CR>
+vnoremap <Leader>k <Plug>NERDCommenterToggle<CR>
 let g:NERDSpaceDelims = 1               " Add spaces after comment delimiters by default
 let g:NERDCompactSexyComs = 1           " Use compact syntax for prettified multi-line comments
 let g:NERDDefaultAlign = 'left'         " Align line-wise comment delimiters flush left instead of following code indentation
@@ -81,7 +83,7 @@ let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_php_phpcs_args = '--standard=PSR2 --ignore=*/tests/*'
 
 "TagBar
-nmap <Leader>t :Tagbar<CR>
+nnoremap <Leader>t :Tagbar<CR>
 
 "PHP Ctags Tagbar
 let g:tagbar_phpctags_bin='phpctags'
@@ -101,15 +103,21 @@ autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
+
   " Use ag in CtrlP for listing files.
-  let g:ctrlp_user_command = 'ag %s --skip-vcs-ignores -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -p ~/.ag_ignore -U -l --nocolor -g ""'
+
   " ag is fast enough that CtrlP doesn't need to cache
-  " let g:ctrlp_use_caching = 0
+  let g:ctrlp_use_caching = 0
 endif
 
+"Grep
 "bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-" bind \ (backward slash) to grep shortcut
-command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+"bind \ (backward slash) to grep shortcut
 nnoremap \ :Ag<SPACE>
+
+"PhpManual
+nnoremap <Leader>h :help <C-R><C-W><CR>
+nmap <Leader>H <C-h>
