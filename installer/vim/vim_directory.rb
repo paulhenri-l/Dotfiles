@@ -6,6 +6,7 @@ module Vim
       @vimPlugins = File.absolute_path 'files/vim/plugins.vim'
       @vimColors = File.absolute_path 'files/vim/colors'
       @vimFtplugins = File.absolute_path 'files/vim/ftplugin'
+      @vimSnippets = File.absolute_path 'files/vim/snippets'
     end
 
     def run!
@@ -24,6 +25,7 @@ module Vim
     def create_symlinks
       create_symlink @vimConfig, '.vimrc'
       create_symlink @vimColors, '.vim/colors'
+      create_symlink @vimSnippets, '.vim/snippets'
       create_symlink @vimFtplugins, '.vim/ftplugin'
       create_symlink @vimPlugins, '.vim/plugins.vim'
     end

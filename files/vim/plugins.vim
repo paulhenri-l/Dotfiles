@@ -16,7 +16,7 @@ Plugin 'vim-php/tagbar-phpctags.vim'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-commentary'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-line'
 Plugin 'vim-syntastic/syntastic'
@@ -32,6 +32,10 @@ Plugin 'skwp/greplace.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'adoy/vim-php-refactoring-toolbox'
 Plugin 'tobyS/pdv'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'mattn/emmet-vim'
 "Plugin 'posva/vim-vue'
 "-----Plugins end-----"
 
@@ -45,8 +49,8 @@ nnoremap <Leader>& :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0
 
 "-----YouCompleteMe-----"
-" let g:ycm_key_list_select_completion=[]
-" let g:ycm_key_list_previous_completion=[]
+let g:ycm_key_list_select_completion=['<Down>']
+let g:ycm_key_list_previous_completion=['<Up>']
 
 "-----CtrlP-----"
 nnoremap œ :CtrlP<cr>
@@ -63,15 +67,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "-----PHPIndent-----"
 let g:PHP_removeCRwhenUnix = 1
 
-"-----Nerdcomment-----"
-nmap <Leader>k <Plug>NERDCommenterToggle<CR>
-vmap <Leader>k <Plug>NERDCommenterToggle<CR>
-let g:NERDSpaceDelims = 1               " Add spaces after comment delimiters by default
-let g:NERDAltDelims_java = 1            " Set a language to use its alternate delimiters by default
-let g:NERDCompactSexyComs = 1           " Use compact syntax for prettified multi-line comments
-let g:NERDDefaultAlign = 'left'         " Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDCommentEmptyLines = 1         " Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDTrimTrailingWhitespace = 1    " Enable trimming of trailing whitespace when uncommenting
+"-----Vim-commentary-----"
+nmap <Leader>k gcc
 
 "-----Syntastic-----"
 set statusline+=%#warningmsg#

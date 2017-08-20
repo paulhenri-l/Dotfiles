@@ -48,7 +48,7 @@ set hlsearch                                       " Hilight search results
 set incsearch                                      " Incremental search
 
 "Invisbles
-set listchars=tab:▒░,trail:.                       " What should invisibles look like
+set listchars=tab:→\ ,trail:.                      " What should invisibles look like
 set list                                           " Show invisibles
 
 "Split
@@ -71,8 +71,15 @@ hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
 "-----Mapping-----"
 let mapleader = ','
 
+"Line number switching
+nnoremap <Leader>n :call SwitchLineNumbers()<CR>
+vnoremap <Leader>n :call SwitchLineNumbers()<CR>
+
 "Open the vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<CR>:vsp<CR>:e ~/.vim/plugins.vim<CR>gph
+
+"Open the snippets folder
+nmap <Leader>es :tabedit ~/.vim/snippets/<CR>
 
 "No hilight search
 nnoremap <Leader><Space> :nohlsearch<CR>
@@ -101,6 +108,9 @@ nnoremap <C-H> <C-W><C-H>
 " Buffer navigation with gb(n|p)
 nnoremap gbn :bn<CR>
 nnoremap gbp :bp<CR>
+
+"Go to the last viewed file
+nnoremap <Leader>pb :bu#<CR>
 
 "Easy escaping to normal mode
 inoremap jj <esc>
@@ -138,3 +148,14 @@ autocmd CompleteDone * pclose
 
 "-----Plugins-----"
 so ~/.vim/plugins.vim                              " Plugins loader
+
+"-----Functions-----"
+function! SwitchLineNumbers()
+    if &number
+        :set nonumber
+        :set relativenumber
+    else
+        :set number
+        :set norelativenumber
+    endif
+endfunction
