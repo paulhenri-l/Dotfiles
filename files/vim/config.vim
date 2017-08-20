@@ -124,6 +124,9 @@ nnoremap <Leader>f <C-]>
 nnoremap <Leader>F :tag 
 nnoremap <Leader>pf <C-T>
 
+"Sort
+vnoremap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
+
 "-----Auto commands-----"
 augroup autosourcing
     autocmd!
