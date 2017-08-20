@@ -30,6 +30,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'alvan/vim-php-manual'
 Plugin 'skwp/greplace.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'adoy/vim-php-refactoring-toolbox'
+Plugin 'tobyS/pdv'
 "Plugin 'posva/vim-vue'
 "-----Plugins end-----"
 
@@ -41,6 +43,10 @@ filetype plugin indent on
 "-----NerdTree-----"
 nnoremap <Leader>& :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0
+
+"-----YouCompleteMe-----"
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
 
 "-----CtrlP-----"
 nnoremap œ :CtrlP<cr>
@@ -120,3 +126,19 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 "-----PHP-cs-fixer-----"
 let g:php_cs_fixer_rules = "@PSR2"
 nnoremap <silent><leader>pcs :call PhpCsFixerFixFile()<CR>
+
+"-----PHP refactoring-----"
+let g:vim_php_refactoring_use_default_mapping = 0
+nnoremap  <Leader>pda :call PhpDocAll()<CR>
+nnoremap  <Leader>peu :call PhpExtractUse()<CR>
+nnoremap  <Leader>prm :call PhpRenameMethod()<CR>
+vnoremap  <Leader>p== :call PhpAlignAssigns()<CR>
+vnoremap  <Leader>pec :call PhpExtractConst()<CR>
+vnoremap  <Leader>pem :call PhpExtractMethod()<CR>
+nnoremap  <Leader>pcog :call PhpCreateGetters()<CR>
+nnoremap  <Leader>pnp :call PhpCreateProperty()<CR>
+nnoremap  <Leader>pep :call PhpExtractClassProperty()<CR>
+nnoremap  <Leader>prcv :call PhpRenameClassVariable()<CR>
+nnoremap  <Leader>prlv :call PhpRenameLocalVariable()<CR>
+nnoremap  <Leader>psg :call PhpCreateSettersAndGetters()<CR>
+nnoremap  <Leader>pdu :call PhpDetectUnusedUseStatements()<CR>

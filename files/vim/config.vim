@@ -73,7 +73,6 @@ let mapleader = ','
 
 "Open the vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<CR>:vsp<CR>:e ~/.vim/plugins.vim<CR>gph
-nnoremap <Leader>ep :tabedit ~/.vim/plugins.vim<CR>
 
 "No hilight search
 nnoremap <Leader><Space> :nohlsearch<CR>
