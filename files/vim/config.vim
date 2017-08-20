@@ -159,3 +159,7 @@ function! SwitchLineNumbers()
         :set norelativenumber
     endif
 endfunction
+
+"-----Reminders-----"
+" za : Toggle fold
+" zr : Open all folds
