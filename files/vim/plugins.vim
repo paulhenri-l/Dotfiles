@@ -30,11 +30,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'alvan/vim-php-manual'
 Plugin 'skwp/greplace.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
-"Plugin 'ntpeters/vim-better-whitespace'
-"Plugin 'msanders/snipmate.vim'
-"Plugin 'StanAngeloff/php.vim'
-"Plugin 'arnaud-lb/vim-php-namespace'
-"Plugin 'itchyny/lightline.vim'
 "Plugin 'posva/vim-vue'
 "-----Plugins end-----"
 
@@ -121,3 +116,7 @@ nmap <Leader>H <C-h>
 "-----Greplace-----"
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
+
+"-----PHP-cs-fixer-----"
+let g:php_cs_fixer_rules = "@PSR2"
+nnoremap <silent><leader>pcs :call PhpCsFixerFixFile()<CR>
