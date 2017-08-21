@@ -5,7 +5,7 @@
 #System
 alias t="tree -L 1"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
-# alias vim="mvim -v"
+alias vim="mvim -v"
 
 #Git
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
