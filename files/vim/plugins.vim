@@ -100,7 +100,7 @@ autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 
 "-----The silver searcher-----"
 if executable('ag')
-  let g:ctrlp_use_caching = 0
+  " let g:ctrlp_use_caching = 0
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -p ~/.ag_ignore -U -l --nocolor -g ""'
 endif
