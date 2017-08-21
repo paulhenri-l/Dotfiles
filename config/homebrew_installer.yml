@@ -1,0 +1,26 @@
+---
+taps:
+  - 'homebrew/homebrew-php'
+
+packages:
+  - executable: 'ctags'
+    name: 'ctags'
+
+  - executable: 'ag'
+    name: 'the_silver_searcher'
+
+  - executable: 'cmake'
+    name: 'cmake'
+
+  - executable: 'mvim'
+    name: 'mvim'
+
+  - executable: 'phpctags'
+    name: 'phpctags'
+
+  - executable: 'rmtrash'
+    name: 'rmtrash'
+
+  - executable: 'zsh'
+    name: 'zsh zsh-completions'
+

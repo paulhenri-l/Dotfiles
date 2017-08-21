@@ -1,0 +1,7 @@
+---
+compile_plugins:
+  - plugin_directory: '~/.vim/bundle/YouCompleteMe'
+    compile_command: './install.py'
+
+  - plugin_directory: '~/.vim/bundle/vimproc.vim'
+    compile_command: 'make'

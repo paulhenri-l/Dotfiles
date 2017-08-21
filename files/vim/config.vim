@@ -14,7 +14,7 @@ set scrolloff=5                                    " Start scroll when no more t
 set mouse=a                                        " Enable mouse
 set clipboard:unnamed                              " Use system clipboard
 set backspace=indent,eol,start                     " Make backspace behave like every other editor.
-set number                                         " Activate line numbers
+set relativenumber                                 " Activate line numbers
 set autoread                                       " Auto read when file is changed from outside
 set formatoptions-=tc                              " Stop VIM from splitting lines
 set noerrorbells visualbell t_vb=                  " No damn bells!
@@ -59,14 +59,17 @@ set splitright                                     " Split always on the right
 set backupdir=~/.vim/bak                           " where to put backup file
 set dir=~/.vim/tmp                                 " tell vim where to put swap files
 
+"Quickfix
+map <Leader><Leader><Space> :ccl<cr>
+
 "-----Styling-----"
 syntax enable                                      " Syntax higlighting
 set t_Co=256                                       " 256 colors term
 set termguicolors                                  " Enable guicolors in term
 "colorscheme basic-dark
 " colorscheme spring-night
-" colorscheme spacegray
-colorscheme ubaryd
+colorscheme spacegray
+" colorscheme ubaryd
 hi CursorLine cterm=NONE                           " Remove cursorline underline
 hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
 
@@ -107,12 +110,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Buffer navigation with gb(n|p)
+"Buffer navigation
 nnoremap gbn :bn<CR>
 nnoremap gbp :bp<CR>
-
-"Go to the last viewed file
-nnoremap <Leader>pb :bu#<CR>
+nnoremap <Tab> :bu#<CR>
+nnoremap d<Tab> :bd<CR>
+nnoremap D<Tab> :bufdo bd<CR>
 
 "Easy escaping to normal mode
 inoremap jj <esc>

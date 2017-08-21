@@ -1,0 +1,25 @@
+---
+directories:
+  - '~/.vim'
+  - '~/.vim/bak'
+  - '~/.vim/tmp'
+  - '~/.vim/bundle'
+
+symlinks:
+  - original: './files/vim/config.vim'
+    destination: '~/.vimrc'
+
+  - original: './files/vim/colors'
+    destination: '~/.vim/colors'
+
+  - original: './files/vim/snippets'
+    destination: '~/.vim/snippets'
+
+  - original: './files/vim/ftplugin'
+    destination: '~/.vim/ftplugin'
+
+  - original: './files/vim/plugins.vim'
+    destination: '~/.vim/plugins.vim'
+
+  - original: './files/global_ag_ignore'
+    destination: '~/.ag_ignore'

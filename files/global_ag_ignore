@@ -1,7 +1,19 @@
-tmp/
-log/
+.git
+.svn
+.hg
+.DS_Store
+tmp
+log
 *.log
 .keep
 .idea
-node_modules/
+node_modules
 tags
+
+storage/debugbar
+storage/framework
+storage/logs
+log/
+
+# Symfony
+var
