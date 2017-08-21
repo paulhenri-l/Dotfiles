@@ -36,6 +36,9 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'stephpy/vim-yaml'
 "Plugin 'posva/vim-vue'
 "-----Plugins end-----"
 
@@ -43,6 +46,11 @@ call vundle#end()
 filetype plugin indent on
 
 "-----Plugin configuration-----"
+
+"-----Netrw-----"
+let g:netrw_localrmdir='rmtrash'
+let g:netrw_rm_cmd='rmtrash'
+let g:netrw_rmf_cmd='rmtrash'
 
 "-----NerdTree-----"
 nnoremap <Leader>& :NERDTreeToggle<cr>
@@ -54,6 +62,7 @@ let g:ycm_key_list_previous_completion=['<Up>']
 
 "-----CtrlP-----"
 nnoremap œ :CtrlP<cr>
+nnoremap Œ :CtrlPBuffer<cr>
 nnoremap <Leader><S-t> :CtrlPTag<CR>
 let g:ctrlp_by_filename = 1
 let g:ctrlp_extensions = ['tag']
@@ -69,11 +78,14 @@ let g:PHP_removeCRwhenUnix = 1
 
 "-----Vim-commentary-----"
 nmap <Leader>k gcc
+vmap <Leader>k gcc
+autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 
 "-----Syntastic-----"
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
 let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -100,9 +112,9 @@ autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 
 "-----The silver searcher-----"
 if executable('ag')
-  " let g:ctrlp_use_caching = 0
+  let g:ctrlp_use_caching = 0
   set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -p ~/.ag_ignore -U -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -p ~/.ag_ignore -l --nocolor -g ""'
 endif
 
 "-----Grep-----"
