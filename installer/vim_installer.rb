@@ -1,5 +1,3 @@
-require 'yaml'
-
 class VimInstaller
   def initialize(options = {})
     @should_compile = options[:compile]

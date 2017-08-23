@@ -1,5 +1,3 @@
-require 'yaml'
-
 class FileInstaller
   def initialize(options = {})
     @config = YAML.load(File.open 'config/file_installer.yml')

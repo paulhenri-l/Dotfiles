@@ -1,18 +1,19 @@
 #!/usr/bin/env ruby
 
 require 'thor'
+require 'yaml'
 require_relative '../installer/file_installer'
-require_relative '../installer/zsh'
+require_relative '../installer/zsh_installer'
 require_relative '../installer/vim_installer'
 require_relative '../installer/homebrew_installer'
 
 class Dotfiles < Thor
   desc 'Install the dotfiles', ''
-  method_options :compile => :boolean
+  method_options :compile => :boolean, 'no-brew' => :boolean
   def install
     FileInstaller.new(options).install!
     HomeBrewInstaller::new(options).install!
-    Zsh::new.install!
+    ZshInstaller::new(options).install!
     VimInstaller.new(options).install!
   end
 end

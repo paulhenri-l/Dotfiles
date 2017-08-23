@@ -62,7 +62,7 @@ let g:ycm_key_list_previous_completion=['<Up>']
 
 "-----CtrlP-----"
 nnoremap œ :CtrlP<cr>
-nnoremap Œ :CtrlPBuffer<cr>
+nnoremap <S-Tab>   :CtrlPBuffer<cr>
 nnoremap <Leader><S-t> :CtrlPTag<CR>
 let g:ctrlp_by_filename = 1
 let g:ctrlp_extensions = ['tag']

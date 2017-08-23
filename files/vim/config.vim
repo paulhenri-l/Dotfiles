@@ -110,12 +110,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Buffer navigation with gb(n|p)
+"Buffer navigation
 nnoremap gbn :bn<CR>
 nnoremap gbp :bp<CR>
-
-"Go to the last viewed file
-nnoremap <Leader>pb :bu#<CR>
+nnoremap <Tab> :bu#<CR>
+nnoremap d<Tab> :bd<CR>
+nnoremap D<Tab> :bufdo bd<CR>
 
 "Easy escaping to normal mode
 inoremap jj <esc>

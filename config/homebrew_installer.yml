@@ -21,3 +21,6 @@ packages:
   - executable: 'rmtrash'
     name: 'rmtrash'
 
+  - executable: 'zsh'
+    name: 'zsh zsh-completions'
+
