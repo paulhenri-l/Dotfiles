@@ -119,7 +119,7 @@ endif
 
 "-----Grep-----"
 "Press K to search for the word uner cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "Press \ To search with Ag
 nnoremap \ :Ag<SPACE>
