@@ -69,7 +69,7 @@ let g:ctrlp_extensions = ['tag']
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 "-----Vim-airline-----"
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 

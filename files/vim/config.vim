@@ -1,7 +1,7 @@
 set nocompatible                                   " This must be first, because it changes other options as side effect
 
 "-----GUI Settings-----"
-set guifont=inconsolata\ for\ powerline:h17
+set guifont=Operator\ Mono:h14
 set guioptions-=T                                  " Removes top toolbar
 set guioptions-=r                                  " Removes right hand scroll bar
 set go-=L                                          " Removes left hand scroll bar
