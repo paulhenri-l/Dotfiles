@@ -1,7 +1,7 @@
 set nocompatible                                   " This must be first, because it changes other options as side effect
 
 "-----GUI Settings-----"
-set guifont=inconsolata\ for\ powerline:h14
+set guifont=inconsolata\ for\ powerline:h17
 set guioptions-=T                                  " Removes top toolbar
 set guioptions-=r                                  " Removes right hand scroll bar
 set go-=L                                          " Removes left hand scroll bar
@@ -28,7 +28,7 @@ set path=.                                         " Should speed up tag search
 
 "Responsiveness
 set ttyfast                                        " faster redrawing
-set timeout timeoutlen=700 ttimeoutlen=100         " Make escape key more responsive
+set timeout timeoutlen=2500 ttimeoutlen=100         " Make escape key more responsive
 
 "Tabs
 set nowrap                                         " No line wrapping
@@ -60,13 +60,13 @@ set backupdir=~/.vim/bak                           " where to put backup file
 set dir=~/.vim/tmp                                 " tell vim where to put swap files
 
 "Quickfix
-map <Leader><Leader><Space> :ccl<cr>
+nnoremap <Leader><Leader><Space> :ccl<cr>
 
 "-----Styling-----"
 syntax enable                                      " Syntax higlighting
 set t_Co=256                                       " 256 colors term
 set termguicolors                                  " Enable guicolors in term
-"colorscheme basic-dark
+" colorscheme basic-dark
 " colorscheme spring-night
 colorscheme spacegray
 " colorscheme ubaryd
