@@ -5,7 +5,6 @@ require 'yaml'
 require_relative '../installer/file_installer'
 require_relative '../installer/zsh_installer'
 require_relative '../installer/vim_installer'
-require_relative '../installer/neovim_installer'
 require_relative '../installer/homebrew_installer'
 
 class Dotfiles < Thor
@@ -16,7 +15,6 @@ class Dotfiles < Thor
     HomeBrewInstaller::new(options).install!
     ZshInstaller::new(options).install!
     VimInstaller.new(options).install!
-    NeovimInstaller.new(options).install!
   end
 end
 

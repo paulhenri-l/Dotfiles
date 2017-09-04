@@ -4,9 +4,6 @@ directories:
   - '~/.vim/bak'
   - '~/.vim/tmp'
   - '~/.vim/bundle'
-  - '~/.config'
-  - '~/.config/nvim'
-  - '~/.config/nvim/autoload'
 
 symlinks:
   - original: './files/vim/config.vim'
@@ -26,13 +23,3 @@ symlinks:
 
   - original: './files/global_ag_ignore'
     destination: '~/.ag_ignore'
-
-  - original: './files/nvim/init.vim'
-    destination: '~/.config/nvim/init.vim'
-
-  - original: './files/nvim/plugins.vim'
-    destination: '~/.config/nvim/plugins.vim'
-
-  - original: './files/vim/colors'
-    destination: '~/.config/nvim/colors'
-

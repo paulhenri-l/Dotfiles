@@ -1,4 +1,4 @@
 # Install
 run bundle install then
 
-```ruby bin/dotfiles install --compile --no-brew```
+```ruby bin/dotfiles install --compile```

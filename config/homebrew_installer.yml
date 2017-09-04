@@ -24,5 +24,3 @@ packages:
   - executable: 'zsh'
     name: 'zsh zsh-completions'
 
-  - executable: 'nvim'
-    name: 'neovim'
