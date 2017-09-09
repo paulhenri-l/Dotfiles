@@ -1,10 +1,11 @@
 ---
 taps:
   - 'homebrew/homebrew-php'
+  - 'universal-ctags/universal-ctags'
 
 packages:
   - executable: 'ctags'
-    name: 'ctags'
+    name: '--HEAD universal-ctags'
 
   - executable: 'ag'
     name: 'the_silver_searcher'
@@ -23,4 +24,3 @@ packages:
 
   - executable: 'zsh'
     name: 'zsh zsh-completions'
-
