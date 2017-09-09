@@ -6,6 +6,9 @@ directories:
   - '~/.vim/bundle'
 
 symlinks:
+  - original: './files/vim/idea'
+    destination: '~/.ideavimrc'
+
   - original: './files/vim/config.vim'
     destination: '~/.vimrc'
 
