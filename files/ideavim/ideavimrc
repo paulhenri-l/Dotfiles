@@ -1,0 +1,60 @@
+let mapleader = ','
+
+" General
+set showmode                                        " Show current mode in stattus line
+set relativenumber                                  " Relative line numbers
+set hlsearch                                        " Hilight search matches
+set ignorecase                                      " Case insensitive search
+set smartcase                                       " Case sensitive search if capital letters
+set incsearch                                       " Incremental search hilight
+set visualbell                                      " Stop the bell !
+
+" Disable arrow keys
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
+
+" Pane navigation with ctrl+hjkl
+nnoremap <Leader>np :vsp<CR>
+nnoremap <Leader>nP :sp<CR>
+nnoremap gpj :action VimWindowDown<CR>
+nnoremap gpk :action VimWindowUp<CR>
+nnoremap gph :action VimWindowLeft<CR>
+nnoremap gpl :action VimWindowRight<CR>
+
+" Buffer navigation
+nnoremap <Tab> :action VimFilePrevious<CR>
+nnoremap d<Tab> :action VimFileSaveClose<CR>
+nnoremap D<Tab> :action CloseAllEditorsButActive<CR>
+
+" Easy escaping to normal mode
+inoremap jj <esc>
+
+" Resize panes with shift + up - down -right - left
+noremap <silent> <S-Left> <C-w><
+noremap <silent> <S-Up> <C-W>-
+noremap <silent> <S-Down> <C-W>+
+noremap <silent> <S-Right> <C-w>>
+
+" Sort
+vnoremap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
+
+" Search
+nnoremap <Leader><Space> :nohlsearch<CR>
+nnoremap \ :action FindInPath<CR>
+
+" Editor
+nnoremap <Leader>k :action CommentByLineComment<CR>
+vnoremap <Leader>k :action CommentByLineComment<CR>
+
+" Ide
+nnoremap <Leader>f <C-]>
+nnoremap <Leader>F :tag 
+nnoremap <Leader>pf <C-T>
+
+nnoremap <Leader>t :action FileStructurePopup<CR>
+
+" Refactor
+nnoremap <Leader>rr :action RenameElement<CR>
+
