@@ -13,9 +13,6 @@ packages:
   - executable: 'cmake'
     name: 'cmake'
 
-  - executable: 'mvim'
-    name: 'mvim'
-
   - executable: 'phpctags'
     name: 'phpctags'
 
@@ -24,3 +21,9 @@ packages:
 
   - executable: 'zsh'
     name: 'zsh zsh-completions'
+
+  - executable: 'mvim'
+    name: 'mvim'
+
+  - executable: 'nvim'
+    name: 'neovim'

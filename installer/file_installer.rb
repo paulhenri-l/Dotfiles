@@ -21,6 +21,8 @@ class FileInstaller
     original = File.expand_path symlink['original']
     destination = File.expand_path symlink['destination']
 
+    # Check if destination is array
+
     unless File.exist? destination or Dir.exist? destination or File.symlink? destination
       FileUtils.ln_s original, destination
     end

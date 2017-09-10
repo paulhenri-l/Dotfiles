@@ -56,8 +56,8 @@ set splitbelow                                     " Split always below
 set splitright                                     " Split always on the right
 
 "Temp files
-set backupdir=~/.vim/bak                           " where to put backup file
-set dir=~/.vim/tmp                                 " tell vim where to put swap files
+set backupdir=~/.config/vim-global/bak             " where to put backup file
+set dir=~/.config/vim-global/tmp                   " tell vim where to put swap files
 
 "Quickfix
 nnoremap <Leader><Leader><Space> :ccl<cr>
@@ -73,98 +73,15 @@ colorscheme spacegray
 hi CursorLine cterm=NONE                           " Remove cursorline underline
 hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
 
-"-----Mapping-----"
-let mapleader = ','
-
-"Line number switching
-nnoremap <Leader>n :call SwitchLineNumbers()<CR>
-vnoremap <Leader>n :call SwitchLineNumbers()<CR>
-
-"Open the vimrc file.
-nmap <Leader>ev :tabedit $MYVIMRC<CR>:vsp<CR>:e ~/.vim/plugins.vim<CR>gph
-
-"Open the snippets folder
-nmap <Leader>es :tabedit ~/.vim/snippets/<CR>
-
-"No hilight search
-nnoremap <Leader><Space> :nohlsearch<CR>
-
-"Disable arrow keys
-nnoremap <Up> <NOP>
-nnoremap <Down> <NOP>
-nnoremap <Left> <NOP>
-nnoremap <Right> <NOP>
-
-"Tab
-nnoremap <Leader>nt :tabnew<CR>
-
-"Pane navigation with ctrl+hjkl
-nnoremap <Leader>np :vsp<CR>
-nnoremap <Leader>nP :sp<CR>
-nnoremap gpj <C-W><C-J>
-nnoremap gpk <C-W><C-K>
-nnoremap gph <C-W><C-H>
-nnoremap gpl <C-W><C-L>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-"Buffer navigation
-nnoremap gbn :bn<CR>
-nnoremap gbp :bp<CR>
-nnoremap <Tab> :bu#<CR>
-nnoremap d<Tab> :bd<CR>
-nnoremap D<Tab> :bufdo bd<CR>
-
-"Easy escaping to normal mode
-inoremap jj <esc>
-
-"Move lines alt+(j|k)
-nnoremap È :m .-2<CR>==
-nnoremap Ï :m .+1<CR>==
-
-"Resize panes with shift + up - down -right - left
-noremap <silent> <S-Left> <C-w><
-noremap <silent> <S-Up> <C-W>-
-noremap <silent> <S-Down> <C-W>+
-noremap <silent> <S-Right> <C-w>>
-
-"Auto change directory to match current file ,cd
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
-
-"Tags
-nnoremap <Leader>f <C-]>
-nnoremap <Leader>F :tag 
-nnoremap <Leader>pf <C-T>
-
-"Sort
-vnoremap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
-
 "-----Auto commands-----"
 augroup autosourcing
     autocmd!
     autocmd BufWritePost .vimrc source $MYVIMRC
+    autocmd BufWritePost init.vim source $MYVIMRC
     autocmd BufWritePost plugins.vim source $MYVIMRC
+    autocmd BufWritePost global_config.vim source $MYVIMRC
+    autocmd BufWritePost global_mappings.vim source $MYVIMRC
 augroup end
 
 "AutoComplete - Close preview window on complete done
 autocmd CompleteDone * pclose
-
-"-----Plugins-----"
-so ~/.vim/plugins.vim                              " Plugins loader
-
-"-----Functions-----"
-function! SwitchLineNumbers()
-    if &number
-        :set nonumber
-        :set relativenumber
-    else
-        :set number
-        :set norelativenumber
-    endif
-endfunction
-
-"-----Reminders-----"
-" za : Toggle fold
-" zr : Open all folds

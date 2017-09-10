@@ -1,0 +1,5 @@
+" Source globals
+so ~/.config/vim-global/config.vim
+so ~/.config/vim-global/mappings.vim
+
+" Edit config shortcut

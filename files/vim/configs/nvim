@@ -1,0 +1,4 @@
+" Source globals
+so ~/.vim/global_config.vim
+so ~/.vim/global_mappings.vim
+
