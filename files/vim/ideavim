@@ -1,7 +1,7 @@
 let mapleader = ','
 
 " General
-set showmode                                        " Show current mode in stattus line
+set showmode                                        " Show current mode in status line
 set relativenumber                                  " Relative line numbers
 set hlsearch                                        " Hilight search matches
 set ignorecase                                      " Case insensitive search
