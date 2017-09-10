@@ -17,7 +17,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug '907th/vim-auto-save'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
@@ -73,17 +73,12 @@ nmap <Leader>k gcc
 vmap <Leader>k gcc
 autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 
-"-----Syntastic-----"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_check_on_wq = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_php_phpcs_args = '--standard=PSR2 --ignore=*/tests/*'
+"-----Ale-----"
+let g:airline#extensions#ale#enabled = 1
+let g:ale_linters = {
+\   'ruby': [],
+\}
+let g:ale_php_phpcs_standard='PSR2'
 
 "-----TagBar-----"
 nnoremap <Leader>t :Tagbar<CR>

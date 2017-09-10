@@ -1,3 +1,5 @@
 ---
-# Allow key repeat in phpstorm
-key_repeat: 'defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false'
+commands:
+  # Allow key repeat in phpstorm
+  - name: 'phpstorm-key-repeat'
+    command: 'defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false'

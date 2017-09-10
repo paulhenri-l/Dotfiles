@@ -1,9 +1,14 @@
 ---
 directories:
   - '~/.config'
+  - '~/.config/dotfiles'
   - '~/.config/nvim'
   - '~/.config/nvim/bak'
   - '~/.config/nvim/tmp'
+
+files:
+  - path: '~/.config/dotfiles/ran_commands.yml'
+    content: "---\n- 'example_command'\n"
 
 symlinks:
   - original: './files/global_ag_ignore'

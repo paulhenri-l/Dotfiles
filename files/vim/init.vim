@@ -67,8 +67,8 @@ syntax enable                                      " Syntax higlighting
 set t_Co=256                                       " 256 colors term
 set termguicolors                                  " Enable guicolors in term
 " colorscheme basic-dark
-" colorscheme spring-night
-colorscheme spacegray
+colorscheme spring-night
+" colorscheme spacegray
 " colorscheme ubaryd
 hi CursorLine cterm=NONE                           " Remove cursorline underline
 hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
