@@ -1,51 +1,43 @@
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
 "-----Plugins-----"
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-vinegar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'rking/ag.vim'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'vim-php/tagbar-phpctags.vim'
-Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-commentary'
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-line'
-Plugin 'vim-syntastic/syntastic'
-Plugin '907th/vim-auto-save'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-php-namespace'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'alvan/vim-php-manual'
-Plugin 'skwp/greplace.vim'
-Plugin 'stephpy/vim-php-cs-fixer'
-Plugin 'adoy/vim-php-refactoring-toolbox'
-Plugin 'tobyS/pdv'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'mattn/emmet-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'stephpy/vim-yaml'
-"Plugin 'posva/vim-vue'
-"-----Plugins end-----"
-
-call vundle#end()
-filetype plugin indent on
-
-"-----Plugin configuration-----"
+call plug#begin()
+Plug 'VundleVim/Vundle.vim'
+Plug 'tpope/vim-vinegar'
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'rking/ag.vim'
+Plug 'StanAngeloff/php.vim'
+Plug 'majutsushi/tagbar'
+Plug 'vim-php/tagbar-phpctags.vim'
+Plug '2072/PHP-Indenting-for-VIm'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-line'
+Plug 'vim-syntastic/syntastic'
+Plug '907th/vim-auto-save'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+Plug 'alvan/vim-php-manual'
+Plug 'skwp/greplace.vim'
+Plug 'stephpy/vim-php-cs-fixer'
+Plug 'adoy/vim-php-refactoring-toolbox'
+Plug 'tobyS/pdv'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'stephpy/vim-yaml'
+"Plug 'posva/vim-vue'
+call plug#end()
 
 "-----Netrw-----"
 let g:netrw_localrmdir='rmtrash'

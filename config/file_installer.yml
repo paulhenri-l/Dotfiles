@@ -1,40 +1,20 @@
 ---
 directories:
-  - '~/.vim'
-  - '~/.vim/bundle'
   - '~/.config'
-  - '~/.config/vim-global'
-  - '~/.config/vim-global/bak'
-  - '~/.config/vim-global/tmp'
   - '~/.config/nvim'
+  - '~/.config/nvim/bak'
+  - '~/.config/nvim/tmp'
 
 symlinks:
   - original: './files/global_ag_ignore'
     destination: '~/.ag_ignore'
 
-   # Vim global config
-  - original: './files/vim/global/config.vim'
-    destination: '~/.config/vim-global/config.vim'
-
-  - original: './files/vim/global/mappings.vim'
-    destination: '~/.config/vim-global/mappings.vim'
-
-  # Vim config
-  - original: './files/vim/configs/vim'
-    destination: '~/.vimrc'
-
-  - original: './files/vim/colors'
-    destination: '~/.vim/colors'
-
-  - original: './files/vim/snippets'
-    destination: '~/.vim/snippets'
-
-  - original: './files/vim/ftplugin'
-    destination: '~/.vim/ftplugin'
-
   # Nvim config
-  - original: './files/vim/configs/nvim'
+  - original: './files/vim/init.vim'
     destination: '~/.config/nvim/init.vim'
+
+  - original: './files/vim/plugins.vim'
+    destination: '~/.config/nvim/plugins.vim'
 
   - original: './files/vim/colors'
     destination: '~/.config/nvim/colors'
@@ -46,5 +26,5 @@ symlinks:
     destination: '~/.config/nvim/ftplugin'
 
   # Ideavim config
-  - original: './files/vim/configs/ideavim'
+  - original: './files/vim/ideavim'
     destination: '~/.ideavimrc'

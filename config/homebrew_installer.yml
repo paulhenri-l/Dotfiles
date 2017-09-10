@@ -10,9 +10,6 @@ packages:
   - executable: 'ag'
     name: 'the_silver_searcher'
 
-  - executable: 'cmake'
-    name: 'cmake'
-
   - executable: 'phpctags'
     name: 'phpctags'
 
@@ -22,8 +19,8 @@ packages:
   - executable: 'zsh'
     name: 'zsh zsh-completions'
 
-  - executable: 'mvim'
-    name: 'mvim'
-
   - executable: 'nvim'
     name: 'neovim'
+
+  - executable: 'pip3'
+    name: 'pyhton3'
