@@ -37,6 +37,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'stephpy/vim-yaml'
 "Plug 'posva/vim-vue'
+Plug 'evidens/vim-twig'
 call plug#end()
 
 "-----Netrw-----"
@@ -72,6 +73,7 @@ let g:PHP_removeCRwhenUnix = 1
 nmap <Leader>k gcc
 vmap <Leader>k gcc
 autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
+autocmd FileType php setlocal commentstring=//\ %s
 
 "-----Ale-----"
 let g:airline#extensions#ale#enabled = 1
