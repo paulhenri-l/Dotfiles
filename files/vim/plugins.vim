@@ -38,6 +38,8 @@ Plug 'mxw/vim-jsx'
 Plug 'stephpy/vim-yaml'
 "Plug 'posva/vim-vue'
 Plug 'evidens/vim-twig'
+Plug 'slashmili/alchemist.vim'
+Plug 'dracula/vim'
 call plug#end()
 
 "-----Netrw-----"
