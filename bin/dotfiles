@@ -12,14 +12,13 @@ require_relative '../installer/rubies_installer.rb'
 require_relative '../installer/php_installer.rb'
 
 class Dotfiles < Thor
-  desc 'Install the dotfiles', ''
-  method_option 'fast', type: :boolean, default: false
+  desc 'install', 'Install dotfiles + ruby + php + programs'
   def install
     FileInstaller.new(options).install!
     OneOffCommandInstaller.new(options).install!
-    HomeBrewInstaller.new(options).install! unless options['fast']
-    RubiesInstaller.new(options).install! unless options['fast']
-    PhpInstaller.new(options).install! unless options['fast']
+    HomeBrewInstaller.new(options).install!
+    RubiesInstaller.new(options).install!
+    PhpInstaller.new(options).install!
     ZshInstaller.new(options).install!
     NeovimInstaller.new(options).install!
   end

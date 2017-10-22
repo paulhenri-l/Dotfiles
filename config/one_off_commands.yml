@@ -3,3 +3,6 @@ commands:
   # Allow key repeat in phpstorm
   - name: 'phpstorm-key-repeat'
     command: 'defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false'
+
+  - name: 'gitignore global'
+    command: 'git config --global core.excludesfile ~/.gitignore_global'

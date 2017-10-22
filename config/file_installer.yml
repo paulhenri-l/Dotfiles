@@ -11,6 +11,9 @@ files:
     content: "---\n- 'example_command'\n"
 
 symlinks:
+  - original: './files/gitignore_global'
+    destination: '~/.gitignore_global'
+
   - original: './files/global_ag_ignore'
     destination: '~/.ag_ignore'
 
