@@ -4,14 +4,20 @@ class NeovimInstaller
 
   def install!
     install_python_extension
+    install_ruby_extension
     install_plug
     install_plugins
   end
 
   private
+
   def install_python_extension
     system 'pip3 install --upgrade neovim'
     system 'pip2 install --upgrade neovim'
+  end
+
+  def install_ruby_extension
+    system 'gem install neovim'
   end
 
   def install_plug

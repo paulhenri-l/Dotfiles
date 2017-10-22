@@ -6,11 +6,10 @@ directories:
   - '~/.config/nvim/bak'
   - '~/.config/nvim/tmp'
 
-files:
-  - path: '~/.config/dotfiles/ran_commands.yml'
-    content: "---\n- 'example_command'\n"
-
 symlinks:
+  - original: './files/zshrc_extension'
+    destination: '~/.dotfilesrc'
+
   - original: './files/gitignore_global'
     destination: '~/.gitignore_global'
 

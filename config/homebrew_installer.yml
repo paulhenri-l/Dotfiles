@@ -4,6 +4,9 @@ taps:
   - 'universal-ctags/universal-ctags'
 
 packages:
+  - executable: 'mysql'
+    name: 'mysql'
+
   - executable: 'ctags'
     name: '--HEAD universal-ctags'
 

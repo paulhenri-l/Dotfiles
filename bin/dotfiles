@@ -3,23 +3,25 @@
 require 'thor'
 require 'yaml'
 
-require_relative '../installer/file_installer'
-require_relative '../installer/zsh_installer'
-require_relative '../installer/neovim_installer'
 require_relative '../installer/homebrew_installer'
-require_relative '../installer/one_off_command_installer.rb'
-require_relative '../installer/rubies_installer.rb'
-require_relative '../installer/php_installer.rb'
+require_relative '../installer/file_installer'
+require_relative '../installer/neovim_installer'
 
 class Dotfiles < Thor
-  desc 'install', 'Install dotfiles + ruby + php + programs'
-  def install
+  desc 'full', 'Homebrew + vim'
+  def full
+    homebrew
+    vim
+  end
+
+  desc 'homebrew', 'Install homebrew packages'
+  def homebrew
+    HomebrewInstaller.new(options).install!
+  end
+
+  desc 'vim', 'Install all config files for vim'
+  def vim
     FileInstaller.new(options).install!
-    OneOffCommandInstaller.new(options).install!
-    HomeBrewInstaller.new(options).install!
-    RubiesInstaller.new(options).install!
-    PhpInstaller.new(options).install!
-    ZshInstaller.new(options).install!
     NeovimInstaller.new(options).install!
   end
 end

@@ -1,5 +1,0 @@
----
-rubies:
-  - version: '2.4.2'
-    global: true
-    gems: ['neovim', 'rails']
