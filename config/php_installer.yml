@@ -1,0 +1,11 @@
+---
+packages:
+  - 'laravel/installer'
+  - 'laravel/valet'
+  - 'phploc/phploc'
+  - 'phpmetrics/phpmetrics'
+  - 'phpmd/phpmd'
+  - 'phpunit/phpunit'
+  - 'squizlabs/php_codesniffer'
+  - 'laravel/lumen-installer'
+  - 'friendsofphp/php-cs-fixer'

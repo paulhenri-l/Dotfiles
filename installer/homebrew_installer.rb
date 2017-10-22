@@ -7,11 +7,9 @@ class HomeBrewInstaller < AbstractProgramInstaller
   end
 
   def install!
-    unless @options['no-brew']
-      install_homebrew
-      @config['taps'].each { |t| add_tap t }
-      @config['packages'].each { |p| install_package p }
-    end
+    install_homebrew
+    @config['taps'].each { |t| add_tap t }
+    @config['packages'].each { |p| install_package p }
   end
 
   private
@@ -28,12 +26,27 @@ class HomeBrewInstaller < AbstractProgramInstaller
   end
 
   def install_package(package)
-    system("brew install #{package['name']}") unless bin_exists? package['executable']
+    if should_install? package
+      system("brew install #{package['name']}")
+      run_post_install_command package['post_command'] if package.include? 'post_command'
+    end
   end
+
+  def run_post_install_command(command)
+    system(command)
+  end 
 
   def tap_exists?(tap)
     @existing_taps = @existing_taps || %x(brew tap)
 
     @existing_taps.include? tap
+  end
+
+  def should_install?(package)
+    if package.include? 'custom_check' 
+      return !system(package['custom_check'])
+    end
+
+    false unless bin_exists? package['executable']
   end
 end

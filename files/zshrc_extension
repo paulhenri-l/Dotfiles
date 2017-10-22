@@ -13,3 +13,6 @@ alias nah="git reset --hard"
 
 #Vim
 alias phptags="ctags --languages=PHP -R --exclude=\"\.git\" --totals=yes --tag-relative=yes --PHP-kinds=+cdft"
+
+# Load rbenv
+eval "$(rbenv init -)"
