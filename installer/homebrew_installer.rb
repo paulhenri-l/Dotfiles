@@ -61,9 +61,7 @@ class HomebrewInstaller
       return !system(package['custom_check'])
     end
 
-    return false if bin_exists? package['executable']
-
-    true
+    return true unless bin_exists? package['executable']
   end
 
   def bin_exists?(name)

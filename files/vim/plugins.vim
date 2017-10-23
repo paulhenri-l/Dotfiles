@@ -9,36 +9,21 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'rking/ag.vim'
 Plug 'StanAngeloff/php.vim'
-Plug 'majutsushi/tagbar'
-Plug 'vim-php/tagbar-phpctags.vim'
 Plug '2072/PHP-Indenting-for-VIm'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
-Plug 'w0rp/ale'
-Plug '907th/vim-auto-save'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
-Plug 'alvan/vim-php-manual'
-Plug 'skwp/greplace.vim'
-Plug 'stephpy/vim-php-cs-fixer'
-Plug 'adoy/vim-php-refactoring-toolbox'
-Plug 'tobyS/pdv'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
-Plug 'mattn/emmet-vim'
+Plug 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'stephpy/vim-yaml'
-"Plug 'posva/vim-vue'
-Plug 'evidens/vim-twig'
-Plug 'slashmili/alchemist.vim'
 Plug 'dracula/vim'
 call plug#end()
 
@@ -77,22 +62,6 @@ vmap <Leader>k gcc
 autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 autocmd FileType php setlocal commentstring=//\ %s
 
-"-----Ale-----"
-let g:airline#extensions#ale#enabled = 1
-let g:ale_linters = {
-\   'ruby': [],
-\}
-let g:ale_php_phpcs_standard='PSR2'
-
-"-----TagBar-----"
-nnoremap <Leader>t :Tagbar<CR>
-
-"-----PHP Ctags Tagbar-----"
-let g:tagbar_phpctags_bin='phpctags'
-
-"-----Autosave-----"
-" let g:auto_save = 1  " enable AutoSave on Vim startup
-
 "-----Vim-php-namespace-----"
 function! IPhpInsertUse()
     call PhpInsertUse()
@@ -115,30 +84,5 @@ nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 "Press \ To search with Ag
 nnoremap \ :Ag<SPACE>
 
-"-----PhpManual-----"
-nnoremap <Leader>h :help <C-R><C-W><CR>
-nmap <Leader>H <C-h>
-
 "-----Greplace-----"
-set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
-
-"-----PHP-cs-fixer-----"
-let g:php_cs_fixer_rules = "@PSR2"
-nnoremap <silent><leader>pcs :call PhpCsFixerFixFile()<CR>
-
-"-----PHP refactoring-----"
-let g:vim_php_refactoring_use_default_mapping = 0
-nnoremap  <Leader>pda :call PhpDocAll()<CR>
-nnoremap  <Leader>peu :call PhpExtractUse()<CR>
-nnoremap  <Leader>prm :call PhpRenameMethod()<CR>
-vnoremap  <Leader>p== :call PhpAlignAssigns()<CR>
-vnoremap  <Leader>pec :call PhpExtractConst()<CR>
-vnoremap  <Leader>pem :call PhpExtractMethod()<CR>
-nnoremap  <Leader>pcog :call PhpCreateGetters()<CR>
-nnoremap  <Leader>pnp :call PhpCreateProperty()<CR>
-nnoremap  <Leader>pep :call PhpExtractClassProperty()<CR>
-nnoremap  <Leader>prcv :call PhpRenameClassVariable()<CR>
-nnoremap  <Leader>prlv :call PhpRenameLocalVariable()<CR>
-nnoremap  <Leader>psg :call PhpCreateSettersAndGetters()<CR>
-nnoremap  <Leader>pdu :call PhpDetectUnusedUseStatements()<CR>
