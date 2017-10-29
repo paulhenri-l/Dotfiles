@@ -2,29 +2,49 @@ filetype off
 
 "-----Plugins-----"
 call plug#begin()
-Plug 'VundleVim/Vundle.vim'
+
+" Navigation
 Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-airline/vim-airline'
 Plug 'rking/ag.vim'
-Plug 'StanAngeloff/php.vim'
-Plug '2072/PHP-Indenting-for-VIm'
+
+" Interface
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-commentary'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-line'
-Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
+Plug 'dracula/vim'
+
+" Editor 
+Plug 'garbas/vim-snipmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'arnaud-lb/vim-php-namespace'
-Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
-Plug 'garbas/vim-snipmate'
-Plug 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
+Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+
+" JS
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+
+" PHP
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'StanAngeloff/php.vim'
+Plug '2072/PHP-Indenting-for-VIm'
+
+" Ruby
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'vim-ruby/vim-ruby'
+
+" other
+Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
 Plug 'stephpy/vim-yaml'
-Plug 'dracula/vim'
+
+" Required by other
+Plug 'tpope/vim-dispatch'
+Plug 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
+Plug 'tomtom/tlib_vim' " Required by snipmate
+
+
 call plug#end()
 
 "-----Netrw-----"
@@ -43,9 +63,7 @@ let g:ycm_key_list_previous_completion=['<Up>']
 "-----CtrlP-----"
 nnoremap œ :CtrlP<cr>
 nnoremap <S-Tab>   :CtrlPBuffer<cr>
-nnoremap <Leader><S-t> :CtrlPTag<CR>
 let g:ctrlp_by_filename = 1
-let g:ctrlp_extensions = ['tag']
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 "-----Vim-airline-----"

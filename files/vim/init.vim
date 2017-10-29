@@ -28,7 +28,7 @@ set path=.                                         " Should speed up tag search
 
 "Responsiveness
 set ttyfast                                        " faster redrawing
-set timeout timeoutlen=2500 ttimeoutlen=100         " Make escape key more responsive
+set timeout timeoutlen=700 ttimeoutlen=100        " Make escape key more responsive
 
 "Tabs
 set nowrap                                         " No line wrapping
@@ -102,24 +102,15 @@ nnoremap gpj <C-W><C-J>
 nnoremap gpk <C-W><C-K>
 nnoremap gph <C-W><C-H>
 nnoremap gpl <C-W><C-L>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 "Buffer navigation
-nnoremap gbn :bn<CR>
-nnoremap gbp :bp<CR>
 nnoremap <Tab> :bu#<CR>
 nnoremap d<Tab> :bd<CR>
 nnoremap D<Tab> :bufdo bd<CR>
 
 "Easy escaping to normal mode
 inoremap jj <esc>
-
-"Move lines alt+(j|k)
-nnoremap È :m .-2<CR>==
-nnoremap Ï :m .+1<CR>==
+inoremap kk <esc>
 
 "Resize panes with shift + up - down -right - left
 noremap <silent> <S-Left> <C-w><
