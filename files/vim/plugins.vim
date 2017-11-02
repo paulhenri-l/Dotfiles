@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim'
 
 " Editor 
+Plug 'w0rp/ale'
 Plug 'garbas/vim-snipmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -94,6 +95,9 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -p ~/.ag_ignore -l --nocolor -g ""'
 endif
+
+"-----Ale-----"
+let g:ale_php_phpcs_standard = 'PSR2'
 
 "-----Grep-----"
 "Press K to search for the word uner cursor
