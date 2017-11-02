@@ -48,5 +48,8 @@ packages:
   - executable: 'composer'
     name: 'composer'
 
+  - executable: 'carthage'
+    name: 'carthage'
+
   - executable: 'htop'
     name: 'htop'

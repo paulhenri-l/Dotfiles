@@ -38,3 +38,7 @@ Thumbs.db
 
 #####
 .idea/
+
+# Ruby/Rails #
+##############
+coverage/*
