@@ -16,3 +16,6 @@ alias phptags="ctags --languages=PHP -R --exclude=\"\.git\" --totals=yes --tag-r
 
 # Load rbenv
 eval "$(rbenv init -)"
+
+# Exports
+export HOMEBREW_NO_ANALYTICS=1
