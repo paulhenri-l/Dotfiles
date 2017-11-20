@@ -3,6 +3,7 @@ let mapleader = ','
 " General
 set showmode                                        " Show current mode in status line
 set relativenumber                                  " Relative line numbers
+set number                                          " Show current line number
 set hlsearch                                        " Hilight search matches
 set ignorecase                                      " Case insensitive search
 set smartcase                                       " Case sensitive search if capital letters

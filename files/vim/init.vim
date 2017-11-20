@@ -9,6 +9,7 @@ set mouse=a                                        " Enable mouse
 set clipboard:unnamed                              " Use system clipboard
 set backspace=indent,eol,start                     " Make backspace behave like every other editor.
 set relativenumber                                 " Activate line numbers
+set number                                         " Show current line number
 set autoread                                       " Auto read when file is changed from outside
 set formatoptions-=tc                              " Stop VIM from splitting lines
 set noerrorbells visualbell t_vb=                  " No damn bells!
