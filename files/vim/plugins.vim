@@ -36,6 +36,10 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'vim-ruby/vim-ruby'
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+
 " other
 Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
 Plug 'stephpy/vim-yaml'
