@@ -57,18 +57,6 @@ set dir=~/.config/nvim/tmp                         " tell vim where to put swap 
 "Quickfix
 nnoremap <Leader><Leader><Space> :ccl<cr>
 
-"-----Styling-----"
-syntax enable                                      " Syntax higlighting
-set t_Co=256                                       " 256 colors term
-set termguicolors                                  " Enable guicolors in term
-" colorscheme basic-dark
-" colorscheme spring-night
-" colorscheme spacegray
-" colorscheme ubaryd
-colorscheme dracula
-hi CursorLine cterm=NONE                           " Remove cursorline underline
-hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
-
 "-----Mapping-----"
 let mapleader = ','
 
@@ -136,3 +124,19 @@ autocmd CompleteDone * pclose
 
 "-----Plugins-----"
 so ~/.config/nvim/plugins.vim                      " Plugins loader
+
+"-----Styling-----"
+syntax enable                                      " Syntax higlighting
+set t_Co=256                                       " 256 colors term
+set termguicolors                                  " Enable guicolors in term
+" colorscheme basic-dark
+" colorscheme spring-night
+" colorscheme spacegray
+" colorscheme ubaryd
+" colorscheme dracula
+
+let ayucolor='dark'
+colorscheme ayu
+
+hi CursorLine cterm=NONE                           " Remove cursorline underline
+hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar

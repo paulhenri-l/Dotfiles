@@ -8,13 +8,14 @@ Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Interface
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim'
+Plug 'ayu-theme/ayu-vim'
 
-" Editor 
+" Editor
 Plug 'w0rp/ale'
 Plug 'garbas/vim-snipmate'
 Plug 'tpope/vim-surround'
@@ -48,7 +49,6 @@ Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-dispatch'
 Plug 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
 Plug 'tomtom/tlib_vim' " Required by snipmate
-
 
 call plug#end()
 
