@@ -140,3 +140,5 @@ colorscheme ayu
 
 hi CursorLine cterm=NONE                           " Remove cursorline underline
 hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
+hi NonText guifg=#96ED90                           " Change invisibles color
+hi SpecialKey guifg=#96ED90                        " Change invisibles color
