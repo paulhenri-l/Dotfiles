@@ -44,7 +44,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
 " other
-Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stephpy/vim-yaml'
 
 " Required by other
@@ -63,9 +63,10 @@ let g:netrw_rmf_cmd='rmtrash'
 nnoremap <Leader>& :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0
 
-"-----YouCompleteMe-----"
-let g:ycm_key_list_select_completion=['<Down>']
-let g:ycm_key_list_previous_completion=['<Up>']
+"-----Deoplete-----"
+let g:deoplete#enable_at_startup = 1
+inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
 "-----CtrlP-----"
 nnoremap œ :CtrlP<cr>

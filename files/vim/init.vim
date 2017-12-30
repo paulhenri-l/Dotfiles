@@ -92,8 +92,7 @@ nnoremap d<Tab> :bd<CR>
 nnoremap D<Tab> :bufdo bd<CR>
 
 "Easy escaping to normal mode
-inoremap jj <esc>
-inoremap kk <esc>
+" inoremap jj <esc>
 
 "Resize panes with shift + up - down -right - left
 noremap <silent> <S-Left> <C-w><
@@ -122,6 +121,9 @@ augroup end
 "AutoComplete - Close preview window on complete done
 autocmd CompleteDone * pclose
 
+" Remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 "-----Plugins-----"
 so ~/.config/nvim/plugins.vim                      " Plugins loader
 
@@ -135,7 +137,7 @@ set termguicolors                                  " Enable guicolors in term
 " colorscheme ubaryd
 " colorscheme dracula
 
-let ayucolor='dark'
+let ayucolor='mirage'
 colorscheme ayu
 
 hi CursorLine cterm=NONE                           " Remove cursorline underline
