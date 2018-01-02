@@ -13,7 +13,6 @@ class NeovimInstaller
 
   def install_python_extension
     system 'pip3 install --upgrade neovim'
-    system 'pip2 install --upgrade neovim'
   end
 
   def install_ruby_extension
