@@ -10,6 +10,7 @@ alias vim="nvim"
 #Git
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias nah="git reset --hard"
+alias gt="git tag --sort=v:refname"
 
 #Vim
 alias phptags="ctags --languages=PHP -R --exclude=\"\.git\" --totals=yes --tag-relative=yes --PHP-kinds=+cdft"
