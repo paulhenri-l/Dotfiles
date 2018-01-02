@@ -8,13 +8,16 @@ Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
+Plug '/usr/local/opt/fzf'
+" Plug 'junegunn/fzf.vim'
 
 " Interface
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim'
+Plug 'ayu-theme/ayu-vim'
+" Plug 'tomasr/molokai'
+" Plug 'fmoralesc/molokayo'
 
-" Editor 
+" Editor
 Plug 'w0rp/ale'
 Plug 'garbas/vim-snipmate'
 Plug 'tpope/vim-surround'
@@ -36,15 +39,18 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'vim-ruby/vim-ruby'
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+
 " other
-Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stephpy/vim-yaml'
 
 " Required by other
 Plug 'tpope/vim-dispatch'
 Plug 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
 Plug 'tomtom/tlib_vim' " Required by snipmate
-
 
 call plug#end()
 
@@ -57,9 +63,10 @@ let g:netrw_rmf_cmd='rmtrash'
 nnoremap <Leader>& :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0
 
-"-----YouCompleteMe-----"
-let g:ycm_key_list_select_completion=['<Down>']
-let g:ycm_key_list_previous_completion=['<Up>']
+"-----Deoplete-----"
+let g:deoplete#enable_at_startup = 1
+inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
 "-----CtrlP-----"
 nnoremap œ :CtrlP<cr>
@@ -108,3 +115,8 @@ nnoremap \ :Ag<SPACE>
 
 "-----Greplace-----"
 let g:grep_cmd_opts = '--line-numbers --noheading'
+
+"-----Alchemist-----"
+let g:alchemist#elixir_erlang_src = "/Users/phleobon/Sites/Elixir/sources"
+let g:alchemist_tag_map = '<leader>f'
+let g:alchemist_tag_stack_map = '<leader>pf'

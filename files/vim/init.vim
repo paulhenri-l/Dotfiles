@@ -57,18 +57,6 @@ set dir=~/.config/nvim/tmp                         " tell vim where to put swap 
 "Quickfix
 nnoremap <Leader><Leader><Space> :ccl<cr>
 
-"-----Styling-----"
-syntax enable                                      " Syntax higlighting
-set t_Co=256                                       " 256 colors term
-set termguicolors                                  " Enable guicolors in term
-" colorscheme basic-dark
-" colorscheme spring-night
-" colorscheme spacegray
-" colorscheme ubaryd
-colorscheme dracula
-hi CursorLine cterm=NONE                           " Remove cursorline underline
-hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
-
 "-----Mapping-----"
 let mapleader = ','
 
@@ -104,8 +92,7 @@ nnoremap d<Tab> :bd<CR>
 nnoremap D<Tab> :bufdo bd<CR>
 
 "Easy escaping to normal mode
-inoremap jj <esc>
-inoremap kk <esc>
+" inoremap jj <esc>
 
 "Resize panes with shift + up - down -right - left
 noremap <silent> <S-Left> <C-w><
@@ -134,5 +121,26 @@ augroup end
 "AutoComplete - Close preview window on complete done
 autocmd CompleteDone * pclose
 
+" Remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 "-----Plugins-----"
 so ~/.config/nvim/plugins.vim                      " Plugins loader
+
+"-----Styling-----"
+syntax enable                                      " Syntax higlighting
+set t_Co=256                                       " 256 colors term
+set termguicolors                                  " Enable guicolors in term
+" colorscheme basic-dark
+" colorscheme spring-night
+" colorscheme spacegray
+" colorscheme ubaryd
+" colorscheme dracula
+
+let ayucolor='mirage'
+colorscheme ayu
+
+hi CursorLine cterm=NONE                           " Remove cursorline underline
+hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
+hi NonText guifg=#96ED90                           " Change invisibles color
+hi SpecialKey guifg=#96ED90                        " Change invisibles color
