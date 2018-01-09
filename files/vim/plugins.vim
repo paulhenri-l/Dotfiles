@@ -24,6 +24,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
+Plug 'skwp/greplace.vim'
 
 " JS
 Plug 'pangloss/vim-javascript'
