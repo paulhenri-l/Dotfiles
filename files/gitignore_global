@@ -42,3 +42,8 @@ Thumbs.db
 # Ruby/Rails #
 ##############
 coverage/*
+
+# Laravel #
+##########
+.phpstorm.meta.php
+_ide_helper.php

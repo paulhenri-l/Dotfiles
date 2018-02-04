@@ -124,6 +124,9 @@ autocmd CompleteDone * pclose
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Open Nerdtree on vim start
+autocmd vimenter * NERDTree
+
 "-----Plugins-----"
 so ~/.config/nvim/plugins.vim                      " Plugins loader
 
