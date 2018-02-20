@@ -1,0 +1,10 @@
+# Tests
+snippet testmod
+	defmodule ${1}Test do
+		use ExUnit.Case, async: true
+	end
+
+snippet test
+	test "${1}" do
+		${2}
+	end

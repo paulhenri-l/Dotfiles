@@ -18,7 +18,7 @@ Plug 'ayu-theme/ayu-vim'
 " Plug 'fmoralesc/molokayo'
 
 " Editor
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'garbas/vim-snipmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -74,7 +74,7 @@ inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 nnoremap œ :CtrlP<cr>
 nnoremap <S-Tab>   :CtrlPBuffer<cr>
 let g:ctrlp_by_filename = 1
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:15results:15'
 
 "-----Vim-airline-----"
 let g:airline_powerline_fonts = 0
