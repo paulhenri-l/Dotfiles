@@ -8,3 +8,18 @@ snippet test
 	test "${1}" do
 		${2}
 	end
+
+snippet exception
+	defmodule ${1} do
+		defexception [:message]
+	end
+
+snippet exceptionm
+	defmodule ${1} do
+		defexception [:message]
+
+		def exception(${2}) do
+			msg = "${3}"
+			%__MODULE__{message: msg}
+		end
+	end

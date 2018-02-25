@@ -63,7 +63,7 @@ let g:netrw_rmf_cmd='rmtrash'
 "-----NerdTree-----"
 nnoremap <Leader>& :NERDTreeToggle<cr>
 let NERDTreeHijackNetrw = 0
-let NERDTreeShowHidden=1 " Show hidden files
+" let NERDTreeShowHidden=1 " Show hidden files
 
 "-----Deoplete-----"
 let g:deoplete#enable_at_startup = 1
