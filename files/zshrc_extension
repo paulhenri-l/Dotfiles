@@ -2,6 +2,9 @@
 #Aliases#
 #########
 
+# ZSH
+KEYTIMEOUT=1 # https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+
 #System
 alias t="tree -L 1"
 alias updatedb="sudo /usr/libexec/locate.updatedb"

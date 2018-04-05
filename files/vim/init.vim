@@ -23,7 +23,7 @@ set path=.                                         " Should speed up tag search
 
 "Responsiveness
 set ttyfast                                        " faster redrawing
-set timeout timeoutlen=700 ttimeoutlen=100        " Make escape key more responsive
+set timeout timeoutlen=700 ttimeoutlen=10          " Make escape key more responsive
 
 "Tabs
 set nowrap                                         " No line wrapping
