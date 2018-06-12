@@ -1,6 +1,5 @@
 ---
 taps:
-  - 'homebrew/homebrew-php'
   - 'universal-ctags/universal-ctags'
 
 packages:
@@ -41,9 +40,7 @@ packages:
     post_command: 'rbenv init'
 
   - executable: 'php'
-    name: 'php71'
-    custom_check: >
-      php -r "if (strnatcmp(phpversion(), '7.1.0') >= 0) {exit(0);} else {exit(1);}"
+    name: 'php'
 
   - executable: 'composer'
     name: 'composer'
