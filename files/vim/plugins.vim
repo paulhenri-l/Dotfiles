@@ -44,9 +44,13 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " other
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stephpy/vim-yaml'
+Plug 'puppetlabs/puppet-syntax-vim'
 
 " Required by other
 Plug 'tpope/vim-dispatch'
