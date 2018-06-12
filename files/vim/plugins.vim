@@ -51,6 +51,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stephpy/vim-yaml'
 Plug 'puppetlabs/puppet-syntax-vim'
+Plug 'cespare/vim-toml'
 
 " Required by other
 Plug 'tpope/vim-dispatch'
