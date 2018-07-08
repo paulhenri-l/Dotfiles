@@ -131,14 +131,9 @@ so ~/.config/nvim/plugins.vim                      " Plugins loader
 syntax enable                                      " Syntax higlighting
 set t_Co=256                                       " 256 colors term
 set termguicolors                                  " Enable guicolors in term
-" colorscheme basic-dark
-" colorscheme spring-night
-" colorscheme spacegray
-" colorscheme ubaryd
 " colorscheme dracula
-
-let ayucolor='mirage'
 colorscheme ayu
+" let ayucolor='mirage'
 
 hi CursorLine cterm=NONE                           " Remove cursorline underline
 hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar

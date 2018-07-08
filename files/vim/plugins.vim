@@ -46,6 +46,7 @@ Plug 'slashmili/alchemist.vim'
 
 " HTML
 Plug 'mattn/emmet-vim'
+Plug 'alvan/vim-closetag'
 
 " Rust
 Plug 'rust-lang/rust.vim'
