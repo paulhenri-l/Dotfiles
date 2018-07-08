@@ -32,6 +32,9 @@ symlinks:
   - original: './files/vim/ftplugin'
     destination: '~/.config/nvim/ftplugin'
 
+  - original: './files/vim/after'
+    destination: '~/.config/nvim/after'
+
   # Ideavim config
   - original: './files/vim/ideavim'
     destination: '~/.ideavimrc'

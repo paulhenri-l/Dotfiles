@@ -44,6 +44,9 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
+" HTML
+Plug 'mattn/emmet-vim'
+
 " Rust
 Plug 'rust-lang/rust.vim'
 
