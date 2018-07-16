@@ -8,14 +8,10 @@ Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
-Plug '/usr/local/opt/fzf'
-" Plug 'junegunn/fzf.vim'
 
 " Interface
 Plug 'airblade/vim-gitgutter'
 Plug 'ayu-theme/ayu-vim'
-" Plug 'tomasr/molokai'
-" Plug 'fmoralesc/molokayo'
 
 " Editor
 " Plug 'w0rp/ale'
@@ -45,6 +41,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
 " HTML
+Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 Plug 'alvan/vim-closetag'
 
@@ -128,6 +125,6 @@ nnoremap \ :Ag<SPACE>
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
 "-----Alchemist-----"
-let g:alchemist#elixir_erlang_src = "/Users/phleobon/Sites/Elixir/sources"
+let g:alchemist#elixir_erlang_src = '~/Sites/Elixir/sources'
 let g:alchemist_tag_map = '<leader>f'
 let g:alchemist_tag_stack_map = '<leader>pf'
