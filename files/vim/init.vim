@@ -14,7 +14,7 @@ set autoread                                       " Auto read when file is chan
 set formatoptions-=tc                              " Stop VIM from splitting lines
 set noerrorbells visualbell t_vb=                  " No damn bells!
 set cursorline                                     " Highlight the current line.
-set showmatch                                      " Hilight matching )}
+set showmatch                                      " Highlight matching )}
 set autowrite                                      " Save on buffer switch
 
 "Tags
@@ -152,7 +152,6 @@ set background=dark
 " JellyBeans
 " colorscheme jellybeans
 " let g:airline_theme = 'jellybeans'
-
 
 " Overrides
 hi CursorLine cterm=NONE                           " Remove cursorline underline
