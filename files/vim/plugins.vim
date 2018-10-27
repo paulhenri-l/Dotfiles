@@ -10,8 +10,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 
 " Interface
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'ayu-theme/ayu-vim'
+Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
 
 " Editor
 " Plug 'w0rp/ale'

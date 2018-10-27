@@ -131,10 +131,30 @@ so ~/.config/nvim/plugins.vim                      " Plugins loader
 syntax enable                                      " Syntax higlighting
 set t_Co=256                                       " 256 colors term
 set termguicolors                                  " Enable guicolors in term
-" colorscheme dracula
-colorscheme ayu
-" let ayucolor='mirage'
 
+"-----Color scheme-----"
+
+" colorscheme dracula
+
+" Ayu
+" colorscheme ayu
+" let ayucolor='mirage'
+" let g:airline_theme = 'ayu_mirage'
+
+" Gruvbox
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italic = 1
+let g:gruvbox_invert_selection = 0
+let g:gruvbox_sign_column = 'bg0'
+set background=dark
+
+" JellyBeans
+" colorscheme jellybeans
+" let g:airline_theme = 'jellybeans'
+
+
+" Overrides
 hi CursorLine cterm=NONE                           " Remove cursorline underline
 hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
 hi NonText guifg=#96ED90                           " Change invisibles color
