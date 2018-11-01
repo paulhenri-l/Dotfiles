@@ -155,7 +155,7 @@ set background=dark
 " let g:airline_theme = 'jellybeans'
 
 " Overrides
-hi CursorLine cterm=NONE                           " Remove cursorline underline
+hi CursorLine cterm=NONE ctermfg=fg                " Remove cursorline underline
 hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
 hi NonText guifg=#96ED90                           " Change invisibles color
 hi SpecialKey guifg=#96ED90                        " Change invisibles color
