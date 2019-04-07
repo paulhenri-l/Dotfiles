@@ -4,6 +4,7 @@ filetype off
 call plug#begin()
 
 " Navigation
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
