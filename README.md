@@ -1,11 +1,7 @@
 # Dotfiles
 
 ```
-bundle install
-
-ruby bin/dotfiles full
-ruby bin/dotfiles homebrew
-ruby bin/dotfiles vim
+ruby bin/install
 ```
 
 ## Things you might want to do
