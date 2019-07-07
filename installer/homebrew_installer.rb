@@ -4,7 +4,7 @@ class HomebrewInstaller
 
   attr_reader :taps, :packages
 
-  def initialize(options = {})
+  def initialize()
     config = YAML.load(File.open './config/homebrew_installer.yml')
 
     @taps = config['taps']
