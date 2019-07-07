@@ -1,29 +1,11 @@
 #!/usr/bin/env ruby
 
-require 'thor'
 require 'yaml'
 
 require_relative '../installer/homebrew_installer'
 require_relative '../installer/file_installer'
 require_relative '../installer/neovim_installer'
 
-class Dotfiles < Thor
-  desc 'full', 'Homebrew + vim'
-  def full
-    homebrew
-    vim
-  end
-
-  desc 'homebrew', 'Install homebrew packages'
-  def homebrew
-    HomebrewInstaller.new(options).install!
-  end
-
-  desc 'vim', 'Install all config files for vim'
-  def vim
-    FileInstaller.new(options).install!
-    NeovimInstaller.new(options).install!
-  end
-end
-
-Dotfiles.start(ARGV)
+HomebrewInstaller.new.install!
+FileInstaller.new.install!
+NeovimInstaller.new.install!
