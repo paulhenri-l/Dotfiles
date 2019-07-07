@@ -1,5 +1,5 @@
 class NeovimInstaller
-  def initialize(options = {})
+  def initialize()
   end
 
   def install!
