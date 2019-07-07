@@ -1,29 +1,7 @@
 ---
-taps:
-  - 'universal-ctags/universal-ctags'
-
 packages:
-  - executable: 'mysql'
-    name: 'mysql'
-
-  - executable: 'ctags'
-    name: '--HEAD universal-ctags'
-
-    # Required to build youcompleteme
-  - executable: 'cmake'
-    name: 'cmake'
-
   - executable: 'ag'
     name: 'the_silver_searcher'
-
-  - executable: 'phpctags'
-    name: 'phpctags'
-
-  - executable: 'rmtrash'
-    name: 'rmtrash'
-
-  - executable: 'zsh'
-    name: 'zsh zsh-completions'
 
   - executable: 'nvim'
     name: 'neovim'
@@ -35,21 +13,5 @@ packages:
     name: 'fzf'
     post_command: '$(brew --prefix)/opt/fzf/install'
 
-  - executable: 'rbenv'
-    name: 'rbenv'
-    post_command: 'rbenv init'
-
-  - executable: 'php'
-    name: 'php'
-
-  - executable: 'composer'
-    name: 'composer'
-
-  - executable: 'carthage'
-    name: 'carthage'
-
   - executable: 'htop'
     name: 'htop'
-
-  - executable: 'mix'
-    name: 'elixir'
