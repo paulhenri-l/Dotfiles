@@ -1,7 +1,7 @@
 class FileInstaller
   attr_reader :directories, :symlinks
 
-  def initialize(options = {})
+  def initialize()
     config = YAML.load(File.open 'config/file_installer.yml')
 
     @directories = config['directories']
