@@ -7,7 +7,7 @@ class HomebrewInstaller
   def initialize()
     config = YAML.load(File.open './config/homebrew_installer.yml')
 
-    @taps = config['taps']
+    @taps = config['taps'] ||= []
     @packages = config['packages']
   end
 
