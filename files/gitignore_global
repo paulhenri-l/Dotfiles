@@ -51,3 +51,4 @@ _ide_helper_models.php
 _ide_helper.php
 webcore-valet
 .phpunit.result.cache
+.php_cs.cache
