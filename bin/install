@@ -2,12 +2,14 @@
 
 require 'yaml'
 
-require_relative '../installer/homebrew_installer'
-require_relative '../installer/casks_installer'
-require_relative '../installer/file_installer'
 require_relative '../installer/neovim_installer'
 
-HomebrewInstaller.new.install!
-FileInstaller.new.install!
-NeovimInstaller.new.install!
+require_relative '../installer/files_installer'
+require_relative '../installer/packages_installer'
+require_relative '../installer/casks_installer'
+
+# NeovimInstaller.new.install!
+
+FilesInstaller.new.run!
+PackagesInstaller.new.run!
 CasksInstaller.new.run!

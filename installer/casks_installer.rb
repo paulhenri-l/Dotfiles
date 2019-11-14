@@ -1,6 +1,7 @@
 class CasksInstaller
   def initialize
     @casks = YAML.load(File.open "./config/casks.yml") || []
+    @installed_casks = %x(brew cask list)
   end
 
   def run!
@@ -19,7 +20,6 @@ class CasksInstaller
   private
 
   def cask_already_installed(cask)
-    @installed_casks ||= %x(brew cask list)
     listed = @installed_casks.include?(cask["name"])
     directoryExists = Dir.exist?(cask["path"])
 
