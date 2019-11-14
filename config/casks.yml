@@ -1,0 +1,33 @@
+---
+- name: 'adobe-creative-cloud'
+  path: '/Applications/Adobe Creative Cloud'
+
+- name: 'boxcryptor'
+  path: '/Applications/Boxcryptor.app'
+
+- name: 'docker'
+  path: '/Applications/Docker.app'
+
+- name: 'dropbox'
+  path: '/Applications/Dropbox.app'
+
+- name: 'gitkraken'
+  path: '/Applications/GitKraken.app'
+
+- name: 'google-chrome'
+  path: '/Applications/Google Chrome.app'
+
+- name: 'iterm2'
+  path: '/Applications/iTerm.app'
+
+- name: 'jetbrains-toolbox'
+  path: '/Applications/JetBrains Toolbox.app'
+
+- name: 'kitematic'
+  path: '/Applications/Kitematic.app'
+
+- name: 'spectacle'
+  path: '/Applications/Spectacle.app'
+
+- name: 'imageoptim'
+  path: '/Application/ImageOptim.app'

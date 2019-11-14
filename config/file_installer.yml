@@ -1,7 +1,6 @@
 ---
 directories:
   - '~/.config'
-  - '~/.config/dotfiles'
   - '~/.config/nvim'
   - '~/.config/nvim/bak'
   - '~/.config/nvim/tmp'
