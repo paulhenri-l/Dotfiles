@@ -2,11 +2,8 @@
 - executable: 'ag'
   name: 'the_silver_searcher'
 
-- executable: 'nvim'
-  name: 'neovim'
-
-- executable: 'pip3'
-  name: 'python3'
+- executable: 'composer'
+  name: 'composer'
 
 - executable: 'fzf'
   name: 'fzf'
@@ -14,3 +11,27 @@
 
 - executable: 'htop'
   name: 'htop'
+
+- executable: 'npm'
+  name: 'node'
+
+- executable: 'nvim'
+  name: 'neovim'
+
+- executable: 'php'
+  name: 'php'
+
+- executable: 'pip3'
+  name: 'python3'
+
+- executable: 'redis-cli'
+  name: 'redis'
+
+- executable: 'sqlite3'
+  name: 'sqlite'
+
+- executable: 'wget'
+  name: 'wget'
+
+- executable: 'wrk'
+  name: 'wrk'
