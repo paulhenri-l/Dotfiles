@@ -28,6 +28,3 @@
 
 - name: 'spectacle'
   path: '/Applications/Spectacle.app'
-
-- name: 'imageoptim'
-  path: '/Application/ImageOptim.app'
