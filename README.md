@@ -7,7 +7,7 @@ Install dotfiles, casks and packages.
 ### install homebrew
 
 This package leverages homebrew under the hood so you'll need to install it.
-(https://brew.sh/index_fr)[https://brew.sh/index_fr]
+https://brew.sh/index_fr
 
 ## Install
 
@@ -19,7 +19,7 @@ ruby bin/install
 
 ### Install ZSH
 
-(https://ohmyz.sh/)[https://ohmyz.sh/]
+https://ohmyz.sh/
 
 ```
 # Load the dotfiles zshr extension
