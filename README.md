@@ -51,7 +51,4 @@ composer global require laravel/installer laravel/valet phploc/phploc\
 ```
 # Allow key repeat
 defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false
-
-# Set the global gitignore
-git config --global core.excludesfile ~/.gitignore_global
 ```
