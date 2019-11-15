@@ -1,37 +1,57 @@
 # Dotfiles
 
+Install dotfiles, casks and packages.
+
+## Things to do first
+
+### install homebrew
+
+This package leverages homebrew under the hood so you'll need to install it.
+(https://brew.sh/index_fr)[https://brew.sh/index_fr]
+
+## Install
+
 ```
 ruby bin/install
 ```
 
-## Things you might want to do
+## Things to do after
 
 ### Install ZSH
-```
-chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+(https://ohmyz.sh/)[https://ohmyz.sh/]
+
+```
+# Load the dotfiles zshr extension
 echo 'source ~/.dotfilesrc' >> ~/.zshrc
 ```
 
-### Install Ruby
-```
-rbenv install 2.4.2
-rbenv global 2.4.2
-rbenv rehash
-gem install rails neovim
-```
+### Configure git
 
-### Install php packages
 ```
-composer global require laravel/installer laravel/valet phploc/phploc phpmetrics/phpmetrics phpmd/phpmd phpunit/phpunit squizlabs/php_codesniffer laravel/lumen-installer friendsofphp/php-cs-fixer
+git config --global core.excludesfile ~/.gitignore_global
+git config --global user.name "paulhenri-l"
+git config --global user.email "25308170+paulhenri-l@users.noreply.github.com"
 ```
 
-### Run these commands
-Allow key repeat
+### Configure ssh
 
-```defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false```
+You may have ssh config and keys that you want to add in the ~/.ssh directory.
 
-Set the global gitignore
+### Add php packages
 
-```git config --global core.excludesfile ~/.gitignore_global```
+```
+composer global require laravel/installer laravel/valet phploc/phploc\
+                        phpmetrics/phpmetrics phpunit/phpunit\
+                        friendsofphp/php-cs-fixer
+```
+
+### Extra commands
+
+```
+# Allow key repeat
+defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false
+
+# Set the global gitignore
+git config --global core.excludesfile ~/.gitignore_global
+```
