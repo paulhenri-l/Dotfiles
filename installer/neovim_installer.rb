@@ -11,7 +11,7 @@ class NeovimInstaller
 
   def install_prerequisites
     puts " - Install prerequisites"
-    system "pip3 install --upgrade neovim"
+    system "pip3 install --user neovim"
     system "gem install neovim"
   end
 
