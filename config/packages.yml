@@ -9,6 +9,9 @@
   name: 'fzf'
   post_command: 'yes | $(brew --prefix)/opt/fzf/install'
 
+- executable: 'gpg'
+  name: 'gpg'
+
 - executable: 'htop'
   name: 'htop'
 
