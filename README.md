@@ -32,6 +32,8 @@ echo 'source ~/.dotfilesrc' >> ~/.zshrc
 git config --global core.excludesfile ~/.gitignore_global
 git config --global user.name "paulhenri-l"
 git config --global user.email "25308170+paulhenri-l@users.noreply.github.com"
+git config --global user.signingkey 05D830EB702FB9ED
+git config --global commit.gpgsign true
 ```
 
 ### Configure ssh
