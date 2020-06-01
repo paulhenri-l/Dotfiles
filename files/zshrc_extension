@@ -10,5 +10,8 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias nah="git reset --hard"
 alias gt="git tag --sort=v:refname"
 
+# Laravel
+alias routes="artisan route:list --columns=domain,method,uri,name"
+
 # Exports
 export HOMEBREW_NO_ANALYTICS=1

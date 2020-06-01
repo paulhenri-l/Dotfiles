@@ -27,7 +27,7 @@ nnoremap gph :action VimWindowLeft<CR>
 nnoremap gpl :action VimWindowRight<CR>
 
 " Buffer navigation
-nnoremap <Tab> :action VimFilePrevious<CR>
+nnoremap <Tab> :action Switcher<CR>
 nnoremap d<Tab> :action VimFileSaveClose<CR>
 nnoremap D<Tab> :action CloseAllEditorsButActive<CR>
 
@@ -53,7 +53,7 @@ vnoremap <Leader>k :action CommentByLineComment<CR>
 
 " Ide
 nnoremap <Leader>f <C-]>
-nnoremap <Leader>F :tag 
+nnoremap <Leader>F :tag
 nnoremap <Leader>pf <C-T>
 
 nnoremap <Leader>t :action FileStructurePopup<CR>
