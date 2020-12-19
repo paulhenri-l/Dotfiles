@@ -4,6 +4,7 @@ directories:
   - '~/.config/nvim'
   - '~/.config/nvim/bak'
   - '~/.config/nvim/tmp'
+  - '~/.config/nvim/undo_history'
 
 symlinks:
   - original: './files/zshrc_extension'

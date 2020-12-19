@@ -4,7 +4,6 @@ filetype off
 call plug#begin()
 
 " Navigation
-Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -19,7 +18,6 @@ Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 
 " Editor
-" Plug 'w0rp/ale'
 Plug 'garbas/vim-snipmate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -52,6 +50,9 @@ Plug 'alvan/vim-closetag'
 
 " Rust
 Plug 'rust-lang/rust.vim'
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " other
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -116,9 +117,6 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -p ~/.ag_ignore -l --nocolor -g ""'
 endif
 
-"-----Ale-----"
-let g:ale_php_phpcs_standard = 'PSR2'
-
 "-----Grep-----"
 "Press K to search for the word uner cursor
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -133,3 +131,11 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 let g:alchemist#elixir_erlang_src = '~/Sites/Elixir/sources'
 let g:alchemist_tag_map = '<leader>f'
 let g:alchemist_tag_stack_map = '<leader>pf'
+
+"-------VimGo-------"
+" let g:go_fmt_command = "goimports" "Run goimports along gofmt on each save
+let g:go_imports_autosave = 0
+let g:go_auto_type_info = 1 "Automatically get signature/type info for object under cursor
+" call deoplete#custom#option('omni_patterns', {
+" \ 'go': '[^. *\t]\.\w*',
+" \})

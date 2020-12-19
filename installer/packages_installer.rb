@@ -3,7 +3,7 @@ require "mkmf"
 class PackagesInstaller
   def initialize
     @packages = YAML.load(File.open "./config/packages.yml") || []
-    @installed_packages = %x(brew list)
+    @installed_packages = %x(brew list --formula)
   end
 
   def run!

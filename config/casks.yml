@@ -23,8 +23,5 @@
 - name: 'jetbrains-toolbox'
   path: '/Applications/JetBrains Toolbox.app'
 
-- name: 'kitematic'
-  path: '/Applications/Kitematic.app'
-
 - name: 'spectacle'
   path: '/Applications/Spectacle.app'

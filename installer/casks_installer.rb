@@ -1,7 +1,7 @@
 class CasksInstaller
   def initialize
     @casks = YAML.load(File.open "./config/casks.yml") || []
-    @installed_casks = %x(brew cask list)
+    @installed_casks = %x(brew list --cask)
   end
 
   def run!
@@ -10,7 +10,7 @@ class CasksInstaller
       if cask_already_installed cask
         puts " - [#{cask['name']}] already installed"
       else
-        system("brew cask install #{cask["name"]}")
+        system("brew install --cask #{cask["name"]}")
         puts " - [#{cask['name']}] installed"
       end
     end

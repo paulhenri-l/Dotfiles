@@ -54,8 +54,19 @@ set splitright                                     " Split always on the right
 set backupdir=~/.config/nvim/bak                   " where to put backup file
 set dir=~/.config/nvim/tmp                         " tell vim where to put swap files
 
+"Completion
+set completeopt-=preview                           " Disable completion preview
+
 "Quickfix
 nnoremap <Leader><Leader><Space> :ccl<cr>
+
+"Undo history
+" set undofile " Maintain undo history between sessions
+" set undodir=~/.config/nvim/undo_history
+
+"-----Python------"
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'"
 
 "-----Mapping-----"
 let mapleader = ','
