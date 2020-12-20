@@ -60,6 +60,10 @@ set completeopt-=preview                           " Disable completion preview
 "Quickfix
 nnoremap <Leader><Leader><Space> :ccl<cr>
 
+"Folds
+set foldmethod=syntax
+set nofoldenable
+
 "Undo history
 " set undofile " Maintain undo history between sessions
 " set undodir=~/.config/nvim/undo_history
@@ -146,27 +150,47 @@ set termguicolors                                  " Enable guicolors in term
 "-----Color scheme-----"
 
 " colorscheme dracula
+" let g:airline_theme='dracula'
 
 " Ayu
-" colorscheme ayu
-" let ayucolor='mirage'
-" let g:airline_theme = 'ayu_mirage'
+colorscheme ayu
+let ayucolor='mirage'
+let g:airline_theme = 'ayu_mirage'
 
 " Gruvbox
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic = 1
-let g:gruvbox_invert_selection = 0
-let g:gruvbox_sign_column = 'bg0'
-let g:airline_extensions = []
-set background=dark
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_italic = 1
+" let g:gruvbox_invert_selection = 0
+" let g:gruvbox_sign_column = 'bg0'
+" let g:airline_extensions = []
+" set background=dark
 
 " JellyBeans
 " colorscheme jellybeans
 " let g:airline_theme = 'jellybeans'
 
 " Overrides
-hi CursorLine cterm=NONE ctermfg=fg                " Remove cursorline underline
+" hi CursorLine cterm=NONE ctermfg=fg                " Remove cursorline underline
 hi VertSplit guifg=bg guibg=bg                     " Hide the vertical split bar
 hi NonText guifg=#96ED90                           " Change invisibles color
 hi SpecialKey guifg=#96ED90                        " Change invisibles color
+
+" Folds
+function! FoldText()
+    let line = getline(v:foldstart)
+
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+
+    " expand tabs into spaces
+    let onetab = strpart('          ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2)
+    let fillcharcount = windowwidth - len(line)
+
+    return line . repeat(" ", fillcharcount)
+endfunction
+
+set foldtext=FoldText()
