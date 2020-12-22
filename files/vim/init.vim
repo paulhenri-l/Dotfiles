@@ -63,6 +63,7 @@ nnoremap <Leader><Leader><Space> :ccl<cr>
 "Folds
 set foldmethod=syntax
 set nofoldenable
+set foldlevel=100
 
 "Undo history
 " set undofile " Maintain undo history between sessions
