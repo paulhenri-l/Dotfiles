@@ -17,9 +17,6 @@
 - name: 'google-chrome'
   path: '/Applications/Google Chrome.app'
 
-- name: 'iterm2'
-  path: '/Applications/iTerm.app'
-
 - name: 'jetbrains-toolbox'
   path: '/Applications/JetBrains Toolbox.app'
 
