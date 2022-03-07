@@ -50,3 +50,7 @@ _ide_helper.php
 webcore-valet
 .phpunit.result.cache
 .php_cs.cache
+
+# golang  #
+##########
+cover.out
