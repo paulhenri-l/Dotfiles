@@ -1,5 +1,8 @@
 set nocompatible                                   " This must be first, because it changes other options as side effect
 
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
 "-----General Settings-----"
 filetype plugin on                                 " Enable filtype plugins
 set updatetime=250                                 " Lower update time
@@ -107,9 +110,6 @@ nnoremap <Tab> :bu#<CR>
 nnoremap d<Tab> :bd<CR>
 nnoremap D<Tab> :bufdo bd<CR>
 
-"Easy escaping to normal mode
-" inoremap jj <esc>
-
 "Resize panes with shift + up - down -right - left
 noremap <silent> <S-Left> <C-w><
 noremap <silent> <S-Up> <C-W>-
@@ -117,7 +117,7 @@ noremap <silent> <S-Down> <C-W>+
 noremap <silent> <S-Right> <C-w>>
 
 "Auto change directory to match current file ,cd
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
 "Tags
 nnoremap <Leader>f <C-]>
@@ -150,13 +150,13 @@ set termguicolors                                  " Enable guicolors in term
 
 "-----Color scheme-----"
 
-" colorscheme dracula
-" let g:airline_theme='dracula'
+colorscheme dracula
+let g:airline_theme='dracula'
 
 " Ayu
-colorscheme ayu
-let ayucolor='mirage'
-let g:airline_theme = 'ayu_mirage'
+" colorscheme ayu
+" let ayucolor='mirage'
+" let g:airline_theme = 'ayu_mirage'
 
 " Gruvbox
 " colorscheme gruvbox

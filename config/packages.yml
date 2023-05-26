@@ -38,3 +38,15 @@
 
 - executable: 'wrk'
   name: 'wrk'
+
+- executable: 'ctags'
+  name: 'ctags'
+
+- executable: 'rg'
+  name: 'ripgrep'
+
+- executable: 'fd'
+  name: 'fd'
+
+- executable: 'shadowenv'
+  name: 'shadowenv'

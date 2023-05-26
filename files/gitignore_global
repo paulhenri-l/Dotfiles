@@ -36,6 +36,7 @@ Thumbs.db
 
 #####
 .idea/
+tags
 
 # Ruby/Rails #
 ##############
@@ -54,3 +55,4 @@ webcore-valet
 # golang  #
 ##########
 cover.out
+cover.html

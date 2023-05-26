@@ -4,14 +4,17 @@ filetype off
 call plug#begin()
 
 " Navigation
-Plug 'tpope/vim-vinegar'
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rking/ag.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-tree/nvim-web-devicons' " optional
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'akinsho/bufferline.nvim'
+Plug 'tiagovla/scope.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'ahmedkhalf/project.nvim'
 
 " Interface
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
@@ -24,33 +27,22 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
-Plug 'skwp/greplace.vim'
 
 " JS
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
-" PHP
-Plug 'arnaud-lb/vim-php-namespace'
-Plug 'StanAngeloff/php.vim'
-Plug '2072/PHP-Indenting-for-VIm'
-
 " Ruby
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'vim-ruby/vim-ruby'
-
-" Elixir
-Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
+Plug 'tpope/vim-rbenv'
+Plug 'tpope/vim-bundler'
 
 " HTML
 Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 Plug 'alvan/vim-closetag'
-
-" Rust
-Plug 'rust-lang/rust.vim'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -58,80 +50,26 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " other
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'stephpy/vim-yaml'
-Plug 'puppetlabs/puppet-syntax-vim'
-Plug 'cespare/vim-toml'
+Plug 'tpope/vim-dadbod'
 
 " Required by other
 Plug 'tpope/vim-dispatch'
 Plug 'MarcWeber/vim-addon-mw-utils' " Required by snipmate
 Plug 'tomtom/tlib_vim' " Required by snipmate
+Plug 'nvim-lua/plenary.nvim' " Required by telescope
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " Required by telescope
 
 call plug#end()
-
-"-----Netrw-----"
-let g:netrw_localrmdir='rmtrash'
-let g:netrw_rm_cmd='rmtrash'
-let g:netrw_rmf_cmd='rmtrash'
-
-"-----NerdTree-----"
-nnoremap <Leader>& :NERDTreeToggle<cr>
-let NERDTreeHijackNetrw = 0
-" let NERDTreeShowHidden=1 " Show hidden files
 
 "-----Deoplete-----"
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
-"-----CtrlP-----"
-nnoremap œ :CtrlP<cr>
-nnoremap <S-Tab>   :CtrlPBuffer<cr>
-let g:ctrlp_by_filename = 1
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:15results:15'
-
-"-----Vim-airline-----"
-let g:airline_powerline_fonts = 0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-"-----PHPIndent-----"
-let g:PHP_removeCRwhenUnix = 1
-
 "-----Vim-commentary-----"
 nmap <Leader>k gcc
 vmap <Leader>k gcc
 autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
-autocmd FileType php setlocal commentstring=//\ %s
-
-"-----Vim-php-namespace-----"
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-
-"-----The silver searcher-----"
-if executable('ag')
-  let g:ctrlp_use_caching = 0
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -p ~/.ag_ignore -l --nocolor -g ""'
-endif
-
-"-----Grep-----"
-"Press K to search for the word uner cursor
-nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-"Press \ To search with Ag
-nnoremap \ :Ag<SPACE>
-
-"-----Greplace-----"
-let g:grep_cmd_opts = '--line-numbers --noheading'
-
-"-----Alchemist-----"
-let g:alchemist#elixir_erlang_src = '~/Sites/Elixir/sources'
-let g:alchemist_tag_map = '<leader>f'
-let g:alchemist_tag_stack_map = '<leader>pf'
 
 "-------VimGo-------"
 let g:go_fmt_command = "goimports" "Run goimports along gofmt on each save
@@ -140,3 +78,38 @@ let g:go_auto_type_info = 1 "Automatically get signature/type info for object un
 call deoplete#custom#option('omni_patterns', {
 \ 'go': '[^. *\t]\.\w*',
 \})
+
+"-------Rails-------"
+let g:dadbod_manage_dbext = 1
+
+
+"-----Telescope-----"
+nnoremap œ :Telescope find_files<cr>
+nnoremap \ :Telescope live_grep<cr>
+nnoremap K :Telescope grep_string<cr>
+lua require('telescope').load_extension('projects')
+
+"-----nvim-tree----"
+lua << EOF
+require("nvim-tree").setup({
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_root = true
+  },
+})
+EOF
+nnoremap <Leader>& :NvimTreeToggle<cr>
+
+"----bufferline----"
+lua require("bufferline").setup{}
+
+"-------scope------"
+lua require("scope").setup()
+
+"------lualine-----"
+lua require('lualine').setup()
+
+"------project-----"
+lua require('project_nvim').setup()
