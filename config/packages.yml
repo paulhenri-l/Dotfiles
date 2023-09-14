@@ -50,3 +50,6 @@
 
 - executable: 'shadowenv'
   name: 'shadowenv'
+
+- executable: 'gmake'
+  name: 'make'
