@@ -1,10 +1,6 @@
 ---
 directories:
   - '~/.config'
-  - '~/.config/nvim'
-  - '~/.config/nvim/bak'
-  - '~/.config/nvim/tmp'
-  - '~/.config/nvim/undo_history'
 
 symlinks:
   - original: './files/zshrc_extension'
@@ -17,26 +13,16 @@ symlinks:
     destination: '~/.ag_ignore'
 
   # Nvim config
-  - original: './files/vim/init.vim'
-    destination: '~/.config/nvim/init.vim'
+  - original: './files/nvim'
+    destination: '~/.config/nvim'
 
-  - original: './files/vim/plugins.vim'
-    destination: '~/.config/nvim/plugins.vim'
+  # Solargraph Config
+  - original: './files/solargraph'
+    destination: '~/.config/solargraph'
 
-  - original: './files/vim/colors'
-    destination: '~/.config/nvim/colors'
-
-  - original: './files/vim/snippets'
-    destination: '~/.config/nvim/snippets'
-
-  - original: './files/vim/ftplugin'
-    destination: '~/.config/nvim/ftplugin'
-
-  - original: './files/vim/after'
-    destination: '~/.config/nvim/after'
-
-  - original: './files/vim/plugins'
-    destination: '~/.config/nvim/plugins'
+  # Zellij Config
+  - original: './files/zellij'
+    destination: '~/.config/zellij'
 
   # Ideavim config
   - original: './files/vim/ideavim'

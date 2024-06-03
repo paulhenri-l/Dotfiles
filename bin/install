@@ -4,10 +4,8 @@ require "yaml"
 
 require_relative "../installer/files_installer"
 require_relative "../installer/packages_installer"
-require_relative "../installer/neovim_installer"
 require_relative "../installer/casks_installer"
 
 FilesInstaller.new.run!
 PackagesInstaller.new.run!
-NeovimInstaller.new.run!
 CasksInstaller.new.run!

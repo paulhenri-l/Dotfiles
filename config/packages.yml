@@ -2,9 +2,6 @@
 - executable: 'ag'
   name: 'the_silver_searcher'
 
-- executable: 'composer'
-  name: 'composer'
-
 - executable: 'fzf'
   name: 'fzf'
   post_command: 'yes | $(brew --prefix)/opt/fzf/install'
@@ -21,11 +18,8 @@
 - executable: 'nvim'
   name: 'neovim'
 
-- executable: 'php'
-  name: 'php'
-
-- executable: 'pip3'
-  name: 'python3'
+- executable: 'pyenv'
+  name: 'pyenv'
 
 - executable: 'redis-cli'
   name: 'redis'

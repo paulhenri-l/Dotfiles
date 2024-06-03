@@ -14,14 +14,12 @@ PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
 # System
 alias vim="nvim"
 export EDITOR="vim"
+alias z="zellij"
 
 # Git
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias nah="git reset --hard"
 alias gt="git tag --sort=v:refname"
-
-# Laravel
-alias routes="artisan route:list --columns=domain,method,uri,name"
 
 # Exports
 export HOMEBREW_NO_ANALYTICS=1
