@@ -6,6 +6,9 @@
   name: 'fzf'
   post_command: 'yes | $(brew --prefix)/opt/fzf/install'
 
+- executable: 'zellij'
+  name: 'zellij'
+
 - executable: 'gpg'
   name: 'gpg'
 
