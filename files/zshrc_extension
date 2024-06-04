@@ -13,7 +13,7 @@ PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
 
 # System
 alias vim="nvim"
-export EDITOR="vim"
+export EDITOR="nvim"
 alias z="zellij"
 
 # Git

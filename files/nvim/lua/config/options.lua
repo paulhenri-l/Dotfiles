@@ -5,6 +5,8 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = "\\"
 
+vim.g.html_indent_inctags = "p"
+
 -- Folds
 function FoldText()
   local first_line = vim.fn.getline(vim.v.foldstart)
