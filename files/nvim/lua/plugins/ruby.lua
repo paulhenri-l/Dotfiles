@@ -1,4 +1,6 @@
 return {
+  { import = "lazyvim.plugins.extras.lang.ruby" },
+  { "jlcrochet/vim-ruby" },
   { "tpope/vim-rails" },
   { "RRethy/nvim-treesitter-endwise" },
 
@@ -7,27 +9,27 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, { "ruby" })
       opts.endwise = { enable = true }
+      opts.autotag = { enable = true }
+      opts.indent = { enable = false }
     end,
   },
 
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, { "ruby-lsp", "solargraph" })
+      vim.list_extend(opts.ensure_installed, { "solargraph", "erb-lint" })
     end,
   },
 
-  { "neovim/nvim-lspconfig", opts = { servers = {
-    solargraph = {},
-    ruby_lsp = {},
-  } } },
+  { "neovim/nvim-lspconfig", opts = { servers = { solargraph = {} } } },
 
   {
     "stevearc/conform.nvim",
-    optional = true,
     opts = {
+      log_level = vim.log.levels.DEBUG,
       formatters_by_ft = {
         ruby = { "rubocop" },
+        eruby = { "erb-lint" },
       },
     },
   },

@@ -1,6 +1,5 @@
 return {
   { "LazyVim/LazyVim", opts = { colorscheme = "everforest" } },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "neanias/everforest-nvim", version = false, lazy = false, priority = 1000 },
 
   -- Disable default LazyVim plugins
@@ -8,22 +7,34 @@ return {
   { "folke/noice.nvim", enabled = false },
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
   { "akinsho/bufferline.nvim", enabled = false },
-  { "nvimdev/dashboard-nvim", enabled = false },
   { "echasnovski/mini.comment", enabled = false },
 
   -- LazyVim Extra
-  { import = "lazyvim.plugins.extras.coding.copilot" },
-  { import = "lazyvim.plugins.extras.coding.copilot-chat" },
+  -- { import = "lazyvim.plugins.extras.coding.copilot" },
+  -- { import = "lazyvim.plugins.extras.coding.copilot-chat" },
   { import = "lazyvim.plugins.extras.lang.terraform" },
   { import = "lazyvim.plugins.extras.util.gitui" },
   { import = "lazyvim.plugins.extras.editor.refactoring" },
   { import = "lazyvim.plugins.extras.editor.illuminate" },
   { import = "lazyvim.plugins.extras.lang.tailwind" },
+  { import = "lazyvim.plugins.extras.util.project" },
+  { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
+  { import = "lazyvim.plugins.extras.formatting.prettier" },
+  { import = "lazyvim.plugins.extras.lang.typescript" },
+  { import = "lazyvim.plugins.extras.lang.yaml" },
+  { import = "lazyvim.plugins.extras.lang.astro" },
+
+  { "ahmedkhalf/project.nvim", opts = { manual_mode = false } },
+  {
+    "echasnovski/mini.indentscope",
+    opts = function(_, opts)
+      opts.draw = { animation = require("mini.indentscope").gen_animation.none() }
+    end,
+  },
 
   -- Personnal Additions
   { "tpope/vim-surround" },
   { "pechorin/any-jump.vim" },
-  { "tpope/vim-rails" },
   {
     "tpope/vim-commentary",
     keys = {
@@ -46,30 +57,25 @@ return {
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<CR>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.confirm({ select = not cmp.get_selected_entry() })
+          if not cmp.visible() then
+            fallback()
+            return
+          end
+
+          local entry = cmp.get_selected_entry()
+          if entry and entry.source.name ~= "copilot" then
+            cmp.confirm({ select = false })
           else
+            -- Find and confirm the first non-Copilot entry
+            local entries = cmp.get_entries()
+            for _, e in ipairs(entries) do
+              if e.source.name ~= "copilot" then
+                cmp.confirm({ entry = e, select = false })
+                return
+              end
+            end
             fallback()
           end
-          -- if not cmp.visible() then
-          --   fallback()
-          --   return
-          -- end
-
-          -- local entry = cmp.get_selected_entry()
-          -- if entry and entry.source.name ~= "copilot" then
-          --   cmp.confirm({ select = false })
-          -- else
-          --   -- Find and confirm the first non-Copilot entry
-          --   local entries = cmp.get_entries()
-          --   for _, e in ipairs(entries) do
-          --     if e.source.name ~= "copilot" then
-          --       cmp.confirm({ entry = e, select = false })
-          --       return
-          --     end
-          --   end
-          --   fallback()
-          -- end
         end),
 
         ["<Tab>"] = cmp.mapping(function(fallback)
@@ -104,9 +110,9 @@ return {
     "nvim-telescope/telescope.nvim",
     keys = {
       { "<leader><space>", false },
-      { "œ", LazyVim.telescope("files"), desc = "Find Files (Root Dir)" },
-      { "\\", LazyVim.telescope("live_grep"), desc = "Grep (Root Dir)" },
-      { "K", LazyVim.telescope("grep_string"), mode = "v", desc = "Selection (Root Dir)" },
+      { "œ", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
+      { "\\", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+      { "K", LazyVim.pick("grep_string"), mode = "v", desc = "Selection (Root Dir)" },
     },
   },
 }
