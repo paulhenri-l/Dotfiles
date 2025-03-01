@@ -10,8 +10,6 @@ return {
   { "echasnovski/mini.comment", enabled = false },
 
   -- LazyVim Extra
-  -- { import = "lazyvim.plugins.extras.coding.copilot" },
-  -- { import = "lazyvim.plugins.extras.coding.copilot-chat" },
   { import = "lazyvim.plugins.extras.lang.terraform" },
   { import = "lazyvim.plugins.extras.util.gitui" },
   { import = "lazyvim.plugins.extras.editor.refactoring" },

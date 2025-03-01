@@ -1,52 +1,55 @@
 ---
-- executable: 'ag'
-  name: 'the_silver_searcher'
+- executable: "ag"
+  name: "the_silver_searcher"
 
-- executable: 'fzf'
-  name: 'fzf'
-  post_command: 'yes | $(brew --prefix)/opt/fzf/install'
+- executable: "fzf"
+  name: "fzf"
+  post_command: "yes | $(brew --prefix)/opt/fzf/install"
 
-- executable: 'zellij'
-  name: 'zellij'
+- executable: "zellij"
+  name: "zellij"
 
-- executable: 'gpg'
-  name: 'gpg'
+- executable: "gpg"
+  name: "gpg"
 
-- executable: 'htop'
-  name: 'htop'
+- executable: "htop"
+  name: "htop"
 
-- executable: 'npm'
-  name: 'node'
+- executable: "1password-cli"
+  name: "op"
 
-- executable: 'nvim'
-  name: 'neovim'
+- executable: "npm"
+  name: "node"
 
-- executable: 'pyenv'
-  name: 'pyenv'
+- executable: "nvim"
+  name: "neovim"
 
-- executable: 'redis-cli'
-  name: 'redis'
+- executable: "pyenv"
+  name: "pyenv"
 
-- executable: 'sqlite3'
-  name: 'sqlite'
+- executable: "redis-cli"
+  name: "redis"
 
-- executable: 'wget'
-  name: 'wget'
+- executable: "sqlite3"
+  name: "sqlite"
 
-- executable: 'wrk'
-  name: 'wrk'
+- executable: "wget"
+  name: "wget"
 
-- executable: 'ctags'
-  name: 'ctags'
+- executable: "wrk"
+  name: "wrk"
 
-- executable: 'rg'
-  name: 'ripgrep'
+- executable: "ctags"
+  name: "ctags"
 
-- executable: 'fd'
-  name: 'fd'
+- executable: "rg"
+  name: "ripgrep"
 
-- executable: 'shadowenv'
-  name: 'shadowenv'
+- executable: "fd"
+  name: "fd"
 
-- executable: 'gmake'
-  name: 'make'
+- executable: "shadowenv"
+  name: "shadowenv"
+
+- executable: "gmake"
+  name: "make"
