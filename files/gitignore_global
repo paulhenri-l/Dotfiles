@@ -55,3 +55,11 @@ webcore-valet
 ##########
 cover.out
 cover.html
+
+# Other
+.opencode
+
+# Java
+.classpath
+.project
+.settings

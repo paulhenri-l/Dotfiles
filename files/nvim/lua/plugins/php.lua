@@ -1,5 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.lang.php" },
   {
     "mfussenegger/nvim-lint",
     optional = true,

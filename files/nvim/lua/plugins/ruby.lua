@@ -1,5 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.lang.ruby" },
   { "jlcrochet/vim-ruby" },
   { "tpope/vim-rails" },
   { "RRethy/nvim-treesitter-endwise" },

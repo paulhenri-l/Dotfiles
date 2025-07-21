@@ -1,26 +1,16 @@
 return {
-  { "LazyVim/LazyVim", opts = { colorscheme = "everforest" } },
+  { "LazyVim/LazyVim", opts = { colorscheme = "ayu-mirage" } },
   { "neanias/everforest-nvim", version = false, lazy = false, priority = 1000 },
-
-  -- Disable default LazyVim plugins
-  { "folke/flash.nvim", enabled = false },
-  { "folke/noice.nvim", enabled = false },
-  { "lukas-reineke/indent-blankline.nvim", enabled = false },
-  { "akinsho/bufferline.nvim", enabled = false },
-  { "echasnovski/mini.comment", enabled = false },
-
-  -- LazyVim Extra
-  { import = "lazyvim.plugins.extras.lang.terraform" },
-  { import = "lazyvim.plugins.extras.util.gitui" },
-  { import = "lazyvim.plugins.extras.editor.refactoring" },
-  { import = "lazyvim.plugins.extras.editor.illuminate" },
-  { import = "lazyvim.plugins.extras.lang.tailwind" },
-  { import = "lazyvim.plugins.extras.util.project" },
-  { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
-  { import = "lazyvim.plugins.extras.formatting.prettier" },
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-  { import = "lazyvim.plugins.extras.lang.yaml" },
-  { import = "lazyvim.plugins.extras.lang.astro" },
+  {
+    "Shatur/neovim-ayu",
+    config = function()
+      require("ayu").setup({
+        mirage = true, -- Set to `true` to use the mirage variant for dark background
+        terminal = true, -- Let Ayu manage terminal colors
+        overrides = {}, -- Customize highlight groups if needed
+      })
+    end,
+  },
 
   { "ahmedkhalf/project.nvim", opts = { manual_mode = false } },
   {
