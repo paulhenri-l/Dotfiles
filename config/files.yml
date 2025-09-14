@@ -1,29 +1,40 @@
 ---
 directories:
-  - '~/.config'
+  - "~/.config"
 
 symlinks:
-  - original: './files/zshrc_extension'
-    destination: '~/.dotfilesrc'
+  - original: "./files/zshrc_extension"
+    destination: "~/.dotfilesrc"
 
-  - original: './files/gitignore_global'
-    destination: '~/.gitignore_global'
+  - original: "./files/gitignore_global"
+    destination: "~/.gitignore_global"
 
-  - original: './files/global_ag_ignore'
-    destination: '~/.ag_ignore'
+  - original: "./files/global_ag_ignore"
+    destination: "~/.ag_ignore"
 
   # Nvim config
-  - original: './files/nvim'
-    destination: '~/.config/nvim'
+  - original: "./files/nvim"
+    destination: "~/.config/nvim"
 
   # Solargraph Config
-  - original: './files/solargraph'
-    destination: '~/.config/solargraph'
+  - original: "./files/solargraph"
+    destination: "~/.config/solargraph"
+
+  # Alacritty Config
+  - original: "./files/alacritty"
+    destination: "~/.config/alacritty/"
 
   # Zellij Config
-  - original: './files/zellij'
-    destination: '~/.config/zellij'
+  - original: "./files/zellij"
+    destination: "~/.config/zellij"
 
   # Ideavim config
-  - original: './files/vim/ideavim'
-    destination: '~/.ideavimrc'
+  - original: "./files/vim/ideavim"
+    destination: "~/.ideavimrc"
+
+  # Zed Config
+  - original: "./files/zed/settings.json"
+    destination: "~/.config/zed/settings.json"
+
+  - original: "./files/zed/keymap.json"
+    destination: "~/.config/zed/keymap.json"

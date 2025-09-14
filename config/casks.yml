@@ -1,6 +1,12 @@
 ---
-- name: 'docker'
-  path: '/Applications/Docker.app'
+- name: "docker"
+  path: "/Applications/Docker.app"
 
-- name: 'jetbrains-toolbox'
-  path: '/Applications/JetBrains Toolbox.app'
+- name: "jetbrains-toolbox"
+  path: "/Applications/JetBrains Toolbox.app"
+
+- name: "zed"
+  path: "/Applications/Zed.app"
+
+- name: "alacritty"
+  path: "/Applications/Alacritty.app"

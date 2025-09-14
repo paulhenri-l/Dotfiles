@@ -1,0 +1,19 @@
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-frappe.toml"
+]
+
+[window]
+opacity = 0.9
+padding.x = 10
+padding.y = 10
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+[font]
+normal.family = "Monaspice Ne Nerd Font"
+bold.family = "Monaspice Ne Nerd Font"
+italic.family = "Monaspice Ne Nerd Font"
+bold_italic.family = "Monaspice Ne Nerd Font"
+size = 14.0
+

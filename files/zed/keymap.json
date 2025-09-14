@@ -1,0 +1,76 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "œ": "file_finder::Toggle",
+      "": "pane::GoBack",
+      "ë": "pane::GoForward",
+      "cmd-&": "workspace::ToggleLeftDock",
+      "cmd-é": "workspace::ToggleRightDock",
+      ", &": "workspace::ToggleLeftDock",
+      ", é": "workspace::ToggleRightDock",
+      "cmd-k": "assistant::InlineAssist",
+      "©": "outline::Toggle",
+      "cmd-l": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-/": "editor::ToggleComments",
+      "÷": "editor::ToggleComments",
+      "cmd-l": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::NewTerminal",
+      "cmd-alt-t": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      ", n p": "pane::SplitRight",
+      ", n P": "pane::SplitDown",
+      "g p j": "workspace::ActivatePaneDown",
+      "g p k": "workspace::ActivatePaneUp",
+      "g p h": "workspace::ActivatePaneLeft",
+      "g p l": "workspace::ActivatePaneRight",
+      "tab": "tab_switcher::Toggle",
+      "D tab": "pane::CloseAllItems",
+      ", f": "editor::GoToDefinition",
+      ", F": "project_symbols::Toggle",
+      ", p f": "pane::GoBack",
+      ", P f": "pane::GoForward",
+      ", k": "editor::ToggleComments",
+      "\\": "pane::DeploySearch",
+      ", r r": "editor::Rename",
+      ", e v": "zed::OpenKeymap",
+      ", n t": "workspace::NewFile"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      ", k": "editor::ToggleComments",
+      "cmd-l": "assistant::QuoteSelection"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      // Here we bind tab to accept even when there's a language server completion
+      // or the cursor isn't at the correct indentation level
+      "tab": "editor::AcceptEditPrediction"
+    }
+  }
+]
