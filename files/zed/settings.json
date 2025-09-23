@@ -7,14 +7,25 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "telemetry": {
+    "metrics": false
+  },
   "autosave": "on_focus_change",
   "base_keymap": "JetBrains",
   "buffer_font_size": 14.0,
   "buffer_font_family": "Monaspace Neon",
   "buffer_line_height": "comfortable",
-  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "JetBrains New UI Icons (Dark)",
+    "dark": "JetBrains New UI Icons (Dark)"
+  },
   // "icon_theme": "Catppuccin Frappé",
-  "theme": "One Dark Pro",
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light",
+    "dark": "Ayu Dark"
+  },
   "ui_font_size": 16,
   "ui_font_family": "Monaspace Neon Var",
   "vim_mode": true,

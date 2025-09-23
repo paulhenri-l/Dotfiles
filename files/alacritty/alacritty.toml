@@ -16,4 +16,5 @@ bold.family = "Monaspice Ne Nerd Font"
 italic.family = "Monaspice Ne Nerd Font"
 bold_italic.family = "Monaspice Ne Nerd Font"
 size = 14.0
-
+offset = { y = 10 }
+glyph_offset = {  y = 5 }

@@ -1,6 +1,8 @@
 ---
 directories:
   - "~/.config"
+  - "~/.config/zed"
+  - "~/.config/alacritty"
 
 symlinks:
   - original: "./files/zshrc_extension"

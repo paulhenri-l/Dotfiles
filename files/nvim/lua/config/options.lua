@@ -4,8 +4,9 @@
 
 vim.g.mapleader = ","
 vim.g.maplocalleader = "\\"
-
 vim.g.html_indent_inctags = "p"
+
+vim.opt.backspace = "indent,eol,start"
 
 -- Folds
 function FoldText()

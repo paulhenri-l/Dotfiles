@@ -9,7 +9,7 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "catppuccin" } },
 
     -- Templates
     { "Shatur/neovim-ayu" },
@@ -20,7 +20,7 @@ require("lazy").setup({
     { "folke/noice.nvim", enabled = false },
     { "lukas-reineke/indent-blankline.nvim", enabled = false },
     { "akinsho/bufferline.nvim", enabled = false },
-    { "echasnovski/mini.comment", enabled = false },
+    { "nvim-mini/mini.comment", enabled = false },
 
     -- LazyVim Extra
     { import = "lazyvim.plugins.extras.lang.terraform" },
@@ -40,10 +40,8 @@ require("lazy").setup({
     -- Plugins
     { import = "plugins" },
   },
-  defaults = {
-    lazy = false,
-    version = false,
-  },
+
+  defaults = { lazy = false, version = false },
   install = { colorscheme = { "tokyonight", "habamax", "ayu" } },
   checker = { enabled = false },
   performance = {
