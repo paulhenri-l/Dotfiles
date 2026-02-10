@@ -28,11 +28,7 @@
     80,
     120
   ],
-  "theme": {
-    "mode": "dark",
-    "light": "Gruvbox Light",
-    "dark": "Tokyo Night Storm"
-  },
+  "theme": "Tokyo Night Storm",
   "ui_font_size": 16,
   "ui_font_family": "Monaspace Neon Var",
   "vim_mode": true,
@@ -55,7 +51,7 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5"
+      "model": "gemini-3-flash-preview"
     }
   },
   "vim": {

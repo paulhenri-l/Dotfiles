@@ -8,5 +8,11 @@
 - name: "zed"
   path: "/Applications/Zed.app"
 
+- name: "rectangle"
+  path: "/Applications/Rectangle.app"
+
 - name: "alacritty"
   path: "/Applications/Alacritty.app"
+
+- name: "gitkraken"
+  path: "/Applications/GitKraken.app"
