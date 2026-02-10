@@ -41,13 +41,11 @@
     "auto_fold_dirs": true
   },
   "edit_predictions": {
+    "provider": "zed",
     "disabled_globs": [
       ".env"
     ],
     "mode": "eager"
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
   },
   "buffer_font_features": {
     "calt": false
