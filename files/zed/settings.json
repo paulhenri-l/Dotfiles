@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "prettier": {
+    "allowed": false
+  },
   "telemetry": {
     "metrics": false
   },
@@ -20,82 +23,68 @@
     "light": "JetBrains New UI Icons (Dark)",
     "dark": "JetBrains New UI Icons (Dark)"
   },
-  // "icon_theme": "Catppuccin Frappé",
+  "show_wrap_guides": true,
+  "wrap_guides": [
+    80,
+    120
+  ],
   "theme": {
     "mode": "dark",
     "light": "Gruvbox Light",
-    "dark": "Ayu Dark"
+    "dark": "Tokyo Night Storm"
   },
   "ui_font_size": 16,
   "ui_font_family": "Monaspace Neon Var",
   "vim_mode": true,
-
   "project_panel": {
-    "hide_gitignore": true,
-    "auto_fold_dirs": false
+    // "hide_gitignore": true,
+    "auto_fold_dirs": true
   },
-
   "edit_predictions": {
-    "disabled_globs": [".env"],
+    "disabled_globs": [
+      ".env"
+    ],
     "mode": "eager"
   },
-
   "features": {
-    "edit_prediction_provider": "copilot"
-    // "edit_prediction_provider": "zed"
-    // "edit_prediction_provider": "supermaven"
+    "edit_prediction_provider": "zed"
   },
-
   "buffer_font_features": {
     "calt": false
   },
-
   "agent": {
-    "inline_assistant_model": {
-      "provider": "openrouter",
-      "model": "qwen/qwen3-coder"
-    },
-    "default_profile": "ask",
-    "always_allow_tool_actions": false,
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-thinking"
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.5"
     }
   },
-
   "vim": {
     "toggle_relative_line_numbers": true
   },
-
   "languages": {
     "JavaScript": {
-      "format_on_save": "on"
+      "format_on_save": "on",
     },
     "TypeScript": {
-      "format_on_save": "on"
+      "format_on_save": "on",
     }
   },
-
   "lsp": {
+    "eslint": {
+      "settings": {
+        "workingDirectory": {
+          "mode": "auto"
+        }
+      }
+    },
     "solargraph": {
       "initialization_options": {
         "diagnostics": true,
         "formatting": true
       }
     },
-    "jdtls": {
-      "initialization_options": {}
-    },
-    "pyright": {
-      "settings": {
-        "python.analysis": {
-          "diagnosticMode": "workspace",
-          "typeCheckingMode": "strict"
-        },
-        "python": {
-          "pythonPath": ".venv/bin/python"
-        }
-      }
-    }
-  }
+  },
+  "context_servers": {}
 }

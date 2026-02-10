@@ -26,7 +26,7 @@ vim.api.nvim_set_keymap("n", "gph", "<C-W><C-H>", { noremap = true, silent = tru
 vim.api.nvim_set_keymap("n", "gpl", "<C-W><C-L>", { noremap = true, silent = true })
 
 -- Buffer navigation
-vim.api.nvim_set_keymap("n", "<Tab>", ":bu#<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-Tab>", ":bu#<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "d<Tab>", ":bd<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "D<Tab>", ":bufdo bd<CR>", { noremap = true, silent = true })
 
@@ -39,10 +39,11 @@ vim.api.nvim_set_keymap("n", "<S-Right>", "<C-w>>", { noremap = true, silent = t
 -- Auto change directory to match current file
 vim.api.nvim_set_keymap("n", "<Leader>cd", ":cd %:p:h<CR>:pwd<CR>", { noremap = true, silent = true })
 
--- Tags
+-- LSP, Symbols, Code navigation, Code Actions
 vim.api.nvim_set_keymap("n", "<Leader>f", "<C-]>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>F", ":tag", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>pf", "<C-T>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>rr", "<leader>cr", { noremap = false, silent = true })
 
 -- Sort selected text
 vim.api.nvim_set_keymap(
@@ -53,9 +54,22 @@ vim.api.nvim_set_keymap(
 )
 
 -- Move lines up and down in visual mode
-vim.api.nvim_set_keymap("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+-- Normal mode: Move single line
+vim.keymap.set("n", "<S-M-Up>", ":m .-2<CR>==", { noremap = true, silent = true })
+vim.keymap.set("n", "<S-M-Down>", ":m .+1<CR>==", { noremap = true, silent = true })
+
+-- Visual mode: Move selected block
+vim.keymap.set("v", "<S-M-Up>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set("v", "<S-M-Down>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+
+-- Edit Configs
+local function edit_term_setup()
+  vim.cmd("tabnew")
+  vim.cmd("cd ~/.config")
+  vim.cmd("edit ~/.config/nvim/lua/config/lazy.lua")
+  vim.cmd("vsplit ~/.config/zellij/config.kdl")
+  vim.cmd("split ~/.config/ghostty/config")
+end
+
+vim.keymap.set("n", "<leader>et", edit_term_setup, { desc = "Edit terminal setup configs" })
+vim.api.nvim_create_user_command("EditTermSetup", edit_term_setup, {})

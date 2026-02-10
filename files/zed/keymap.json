@@ -55,14 +55,17 @@
       "\\": "pane::DeploySearch",
       ", r r": "editor::Rename",
       ", e v": "zed::OpenKeymap",
-      ", n t": "workspace::NewFile"
+      ", n t": "workspace::NewFile",
+      ", c a": "editor::ToggleCodeActions",
+      ", x x": "diagnostics::Deploy",
+      ", s r": "search::ToggleReplace"
     }
   },
   {
     "context": "Editor && vim_mode == visual",
     "bindings": {
       ", k": "editor::ToggleComments",
-      "cmd-l": "assistant::QuoteSelection"
+      "cmd-l": "agent::QuoteSelection"
     }
   },
   {

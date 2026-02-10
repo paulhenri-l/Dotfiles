@@ -1,5 +1,5 @@
 return {
-  { "jlcrochet/vim-ruby" },
+  { "jlcrochet/vim-ruby", enabled = false },
   { "tpope/vim-rails" },
   { "RRethy/nvim-treesitter-endwise" },
 

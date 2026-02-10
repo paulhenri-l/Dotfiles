@@ -7,6 +7,7 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "normal"; }
     }
     pane {
+        bind "k" { Clear; }
         bind "left" { MoveFocus "left"; }
         bind "down" { MoveFocus "down"; }
         bind "up" { MoveFocus "up"; }
@@ -275,7 +276,14 @@ load_plugins {
 web_client {
     font "monospace"
 }
- 
+
+ui {
+    pane_frames {
+        hide_session_name true
+    }
+}
+
+// Custom Themes
 // Use a simplified UI without special fonts (arrow glyphs)
 // Options:
 //   - true
@@ -285,8 +293,11 @@ simplified_ui true
  
 // Choose the theme that is specified in the themes section.
 // Default: default
-// 
-theme "catppuccin-macchiato"
+//
+theme "tokyo-night-dark"
+// theme "gruvbox-dark"
+// theme "everforest-dark"
+// theme "monokai-pro-ristretto"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -331,7 +342,7 @@ theme "catppuccin-macchiato"
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames false
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)

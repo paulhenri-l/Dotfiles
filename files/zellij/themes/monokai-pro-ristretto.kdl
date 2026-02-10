@@ -1,0 +1,15 @@
+themes {
+  monokai-pro-ristretto {
+    bg "#2c2525"       // Background
+    fg "#fff1f3"       // Foreground
+    red "#fd6883"
+    green "#adda78"
+    blue "#a8a9eb"     // Closest to "blue" in this palette
+    yellow "#f9cc6c"
+    magenta "#f38d70"  // Warm accent (orange-ish in Monokai)
+    orange "#f38d70"   // Same as magenta, since palette doesn’t have distinct orange
+    cyan "#85dacc"
+    black "#72696a"    // Muted gray
+    white "#fff1f3"
+  }
+}
