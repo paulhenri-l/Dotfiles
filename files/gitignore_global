@@ -57,6 +57,10 @@ webcore-valet
 cover.out
 cover.html
 
+# Python #
+__pycache__/
+*.py[cod]
+
 # Other
 .opencode
 
