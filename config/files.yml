@@ -22,6 +22,14 @@ symlinks:
   - original: "./files/solargraph"
     destination: "~/.config/solargraph"
 
+  # Opencode Config
+  - original: "./files/opencode/opencode.jsonc"
+    destination: "~/.config/opencode/opencode.jsonc"
+
+  # Ghostty Config
+  - original: "./files/ghostty"
+    destination: "~/.config/ghostty"
+
   # Alacritty Config
   - original: "./files/alacritty"
     destination: "~/.config/alacritty/"

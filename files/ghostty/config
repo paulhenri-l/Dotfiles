@@ -1,0 +1,48 @@
+font-family = Monaspace Neon Var Regular Light
+# font-family = Monaspice Ne Nerd Font
+#font-family = MesloLGM Nerd Font
+#font-family = JetBrainsMono Nerd Font Mono
+
+font-size = 14
+font-feature = -liga
+# font-thicken = true
+
+adjust-cell-height = 40%
+cursor-style = block
+
+mouse-hide-while-typing = true
+
+window-padding-balance = true
+window-save-state = never
+window-colorspace = "display-p3"
+
+# Keybindings
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+keybind = cmd+k=text:\x0C
+keybind = shift+enter=text:\x1b[13;2u
+
+# Window style
+background-image-fit = cover
+background-image-opacity = 0.15
+
+# TokyoNight Theme Customization
+background-image = 1-scenery-pink-lakeside-sunset-lake-landscape-scenic-panorama-7680x3215-144.png
+theme = TokyoNight
+
+# Gruvbox Theme Customization
+# theme = Gruvbox Dark Hard
+# background-image = 1-grubox.jpg
+
+# Everforest Theme Customization
+# theme = Everforest Dark   Hard
+# background-image = 1-everforest.jpg
+
+# Ristretto Theme Customization
+# theme = Monokai Pro Ristretto
+# background-image = 3-ristretto.jpg
+
+# Kanagawa
+# theme = Kanagawa Wave
+# background-image = 1-kanagawa.jpg
