@@ -3,9 +3,7 @@ directories:
   - "~/.config"
   - "~/.config/zed"
   - "~/.config/alacritty"
-  - "~/.config/opencode/"
-  - "~/.config/ghostty/"
-  - "~/.config/ghostty/themes/"
+  - "~/.config/opencode"
 
 symlinks:
   - original: "./files/zshrc_extension"
