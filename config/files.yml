@@ -3,7 +3,6 @@ directories:
   - "~/.config"
   - "~/.config/zed"
   - "~/.config/alacritty"
-  - "~/.config/opencode"
 
 symlinks:
   - original: "./files/zshrc_extension"
@@ -23,10 +22,6 @@ symlinks:
   - original: "./files/solargraph"
     destination: "~/.config/solargraph"
 
-  # Opencode Config
-  - original: "./files/opencode/opencode.jsonc"
-    destination: "~/.config/opencode/opencode.jsonc"
-
   # Ghostty Config
   - original: "./files/ghostty"
     destination: "~/.config/ghostty"
@@ -34,6 +29,10 @@ symlinks:
   # Alacritty Config
   - original: "./files/alacritty"
     destination: "~/.config/alacritty/"
+
+  # Opencode Config
+  - original: "./files/opencode"
+    destination: "~/.config/opencode/"
 
   # Zellij Config
   - original: "./files/zellij"
