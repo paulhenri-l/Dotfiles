@@ -1,4 +1,7 @@
 ---
+- executable: "rbenv"
+  name: "rbenv"
+
 - executable: "ag"
   name: "the_silver_searcher"
 
