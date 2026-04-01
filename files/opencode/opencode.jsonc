@@ -8,4 +8,5 @@
     "github-copilot",
     "anthropic",
   ],
+  "plugin": ["opencode-wakatime"],
 }

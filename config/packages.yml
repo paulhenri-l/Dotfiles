@@ -1,4 +1,13 @@
 ---
+- executable: "gh"
+  name: "gh"
+
+- executable: "opencode"
+  name: "anomalyco/tap/opencode"
+
+- executable: "btop"
+  name: "btop"
+
 - executable: "rbenv"
   name: "rbenv"
 

@@ -18,6 +18,7 @@
   "telemetry": {
     "metrics": false
   },
+  "show_whitespaces": "trailing",
   "autosave": "on_focus_change",
   "base_keymap": "JetBrains",
   "buffer_font_size": 14.0,
@@ -25,7 +26,7 @@
   "buffer_line_height": "comfortable",
   "icon_theme": {
     "mode": "dark",
-    "light": "JetBrains New UI Icons (Dark)",
+    "light": "Zed (Default)",
     "dark": "JetBrains New UI Icons (Dark)"
   },
   "show_wrap_guides": true,
@@ -33,7 +34,7 @@
     80,
     120
   ],
-  "theme": "Tokyo Night Storm",
+  "theme": "Tokyo Night",
   "ui_font_size": 16,
   "ui_font_family": "Monaspace Neon Var",
   "vim_mode": true,
@@ -48,6 +49,7 @@
     ".ruff_cache",
   ],
   "edit_predictions": {
+    "provider": "copilot",
     "disabled_globs": [
       ".env"
     ],
@@ -67,8 +69,10 @@
     },
     "default_profile": "ask",
     "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "gpt-5.2-codex"
+      "model": "claude-sonnet-4.6"
     }
   },
   "vim": {
