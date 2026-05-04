@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "openai/gpt-5.4",
+  "model": "openai/gpt-5.5",
   "enabled_providers": [
     "openai",
     "opencode",
@@ -9,4 +9,16 @@
     "anthropic",
   ],
   "plugin": ["opencode-wakatime"],
+  "mcp": {
+    "jupyter": {
+      "type": "local",
+      "command": ["uvx", "jupyter-mcp-server@latest"],
+      "enabled": false,
+      "environment": {
+        "JUPYTER_URL": "http://localhost:8888",
+        "JUPYTER_TOKEN": "some-serious-token",
+        "ALLOW_IMG_OUTPUT": "true",
+      },
+    },
+  },
 }

@@ -1,16 +1,12 @@
 font-family = Monaspace Neon Var Regular Light
-# font-family = Monaspice Ne Nerd Font
-#font-family = MesloLGM Nerd Font
-#font-family = JetBrainsMono Nerd Font Mono
-
 font-size = 14
 font-feature = -liga
-# font-thicken = true
 
 adjust-cell-height = 40%
 cursor-style = block
 
 mouse-hide-while-typing = true
+copy-on-select = clipboard
 
 window-padding-balance = true
 window-save-state = never
@@ -46,3 +42,100 @@ theme = TokyoNight
 # Kanagawa
 # theme = Kanagawa Wave
 # background-image = 1-kanagawa.jpg
+
+# # ============================================================
+# # Zellij-like Ghostty keybindings
+# # Focus: tabs, splits, resize, scroll
+# # ============================================================
+# macos-option-as-alt = true
+#
+# # ============================================================
+# # Direct Zellij-like navigation
+# # ============================================================
+# keybind = alt+arrow_left=goto_split:left
+# keybind = alt+arrow_down=goto_split:down
+# keybind = alt+arrow_up=goto_split:up
+# keybind = alt+arrow_right=goto_split:right
+#
+# keybind = alt+f=toggle_split_zoom
+#
+# keybind = alt+i=move_tab:-1
+# keybind = alt+o=move_tab:1
+#
+# keybind = alt+shift+h=previous_tab
+# keybind = alt+shift+l=next_tab
+# keybind = alt+shift+arrow_left=previous_tab
+# keybind = alt+shift+arrow_right=next_tab
+#
+# # ============================================================
+# # Prefix modes
+# # ============================================================
+# keybind = ctrl+p=activate_key_table:pane
+# keybind = ctrl+t=activate_key_table:tab
+# keybind = ctrl+n=activate_key_table:resize
+# keybind = ctrl+s=activate_key_table:scroll
+#
+# # ============================================================
+# # Pane mode: Ctrl-p then ...
+# # ============================================================
+# keybind = pane/n=new_split:auto
+# keybind = pane/r=new_split:right
+# keybind = pane/d=new_split:down
+#
+# keybind = pane/f=toggle_split_zoom
+# keybind = pane/x=close_surface
+# keybind = pane/c=clear_screen
+#
+# keybind = pane/escape=deactivate_key_table
+# keybind = pane/catch_all=deactivate_key_table
+#
+#
+# # ============================================================
+# # Tab mode: Ctrl-t then ...
+# # ============================================================
+# keybind = tab/h=previous_tab
+# keybind = tab/k=previous_tab
+# keybind = tab/arrow_left=previous_tab
+# keybind = tab/arrow_up=previous_tab
+#
+# keybind = tab/l=next_tab
+# keybind = tab/j=next_tab
+# keybind = tab/arrow_right=next_tab
+# keybind = tab/arrow_down=next_tab
+#
+# keybind = tab/n=new_tab
+# keybind = tab/x=close_tab:this
+#
+# keybind = tab/1=goto_tab:1
+# keybind = tab/2=goto_tab:2
+# keybind = tab/3=goto_tab:3
+# keybind = tab/4=goto_tab:4
+# keybind = tab/5=goto_tab:5
+# keybind = tab/6=goto_tab:6
+# keybind = tab/7=goto_tab:7
+# keybind = tab/8=goto_tab:8
+# keybind = tab/9=last_tab
+#
+# keybind = tab/i=move_tab:-1
+# keybind = tab/o=move_tab:1
+#
+# keybind = tab/escape=deactivate_key_table
+# keybind = tab/catch_all=deactivate_key_table
+#
+# # ============================================================
+# # Resize mode: Ctrl-n then ...
+# # ============================================================
+# keybind = resize/h=resize_split:left,10
+# keybind = resize/j=resize_split:down,10
+# keybind = resize/k=resize_split:up,10
+# keybind = resize/l=resize_split:right,10
+#
+# keybind = resize/arrow_left=resize_split:left,10
+# keybind = resize/arrow_down=resize_split:down,10
+# keybind = resize/arrow_up=resize_split:up,10
+# keybind = resize/arrow_right=resize_split:right,10
+#
+# keybind = resize/==equalize_splits
+#
+# keybind = resize/escape=deactivate_key_table
+# keybind = resize/catch_all=deactivate_key_table
